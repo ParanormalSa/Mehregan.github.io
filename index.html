@@ -23,23 +23,24 @@
         }
 
         header {
-            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/header-image.jpg'); /* لینک تصویر درست */
-            background-size: cover; /* تصویر به طور کامل فضای هدر را می‌پوشاند */
-            background-position: center; /* تصویر در وسط هدر قرار می‌گیرد */
+            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/header-image.jpg'); /* مسیر تصویر هدر */
+            background-size: cover; /* پوشش کامل فضای هدر */
+            background-position: center; /* قرار گرفتن در وسط */
+            background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
+            height: 400px; /* ارتفاع هدر */
             color: #fff;
-            padding: 100px 0; /* افزایش پدینگ برای فضای بهتر */
+            padding: 50px 0; /* پدینگ برای نمایش بهتر */
             text-align: center;
             position: relative;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin: 0;
         }
 
         header p {
-            font-size: 1.5rem;
-            margin-top: 10px;
+            font-size: 1.2rem;
         }
 
         nav {
@@ -53,7 +54,7 @@
             padding: 15px 25px;
             text-decoration: none;
             font-size: 1.2rem;
-            font-weight: bold;
+            font-weight: bold; /* بولد کردن فونت منو */
         }
 
         nav a:hover {
@@ -67,6 +68,11 @@
             background: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
         }
 
         footer {
@@ -89,10 +95,6 @@
         <a href="#portfolio">نمونه‌کارها</a>
         <a href="#contact">تماس با ما</a>
     </nav>
-    <section class="hero">
-        <h1>به موسسه مهرگان خوش آمدید</h1>
-        <p>با ما در مسیر موفقیت تحصیلی همراه شوید</p>
-    </section>
     <section id="about">
         <h2>درباره ما</h2>
         <p>دفتر مشاوره تحصیلی مهرگان با تجربه‌ای گسترده در تمامی رشته‌ها و گرایش‌های تحصیلی، خدمات تخصصی و جامع را به دانشجویان و پژوهشگران ارائه می‌دهد. ما با تکیه بر دانش روز و تسلط کامل به نرم‌افزارهای تحقیقاتی، در تمامی مراحل انتخاب موضوعات نوآورانه، ایده‌پردازی، و اجرای پژوهش همراه شما هستیم. همچنین، تیم ما با توانایی نگارش و ویرایش مقالات علمی بر اساس استانداردهای بین‌المللی، شما را در مسیر چاپ آثار علمی ارزشمند یاری می‌کند. تعهد ما به کیفیت و خلاقیت، پایه موفقیت پروژه‌های شما خواهد بود.</p>
