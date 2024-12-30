@@ -1,33 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موسسه مشاوره تحصیلی مهرگان</title>
-    
-    <!-- لینک به فونت‌های Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- استایل‌های داخلی -->
+    <link href="URL-TO-FONT-CDN" rel="stylesheet">
     <style>
-        /* استفاده از فونت‌های دانلود شده */
+        @font-face {
+            font-family: 'B Nazanin';
+            src: url('./fonts/BNazanin.woff2') format('woff2'),
+                 url('./fonts/BNazanin.woff') format('woff'),
+                 url('./fonts/BNazanin.ttf') format('truetype');
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'B Nazanin', sans-serif;
             background-color: #f9f9f9;
             margin: 0;
             padding: 0;
             color: #333;
             line-height: 1.6;
         }
+
+        /* استایل هدر تغییر داده شده */
         header {
             background-color: #007bff;
             color: #fff;
-            padding: 15px 0;
+            padding: 50px 0; /* افزایش پدینگ برای افزایش ارتفاع هدر */
             text-align: center;
+            position: absolute; /* موقعیت هدر را ثابت می‌کنیم */
+            top: 50%; /* موقعیت هدر از بالای صفحه */
+            left: 50%; /* موقعیت هدر از سمت چپ صفحه */
+            transform: translate(-50%, -50%); /* این ویژگی برای تنظیم دقیق موقعیت به وسط صفحه است */
+            width: 100%; /* عرض هدر را 100% می‌کنیم */
         }
+
         nav {
             display: flex;
             justify-content: center;
             background-color: #0056b3;
         }
+
         nav a {
             color: #fff;
             padding: 15px 25px;
@@ -35,9 +48,11 @@
             font-size: 1.2rem;
             font-weight: bold; /* بولد کردن فونت منو */
         }
+
         nav a:hover {
             background-color: #004494;
         }
+
         section {
             max-width: 1200px;
             margin: 20px auto;
@@ -46,40 +61,12 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .hero {
             text-align: center;
             padding: 50px 20px;
         }
-        .hero h1 {
-            font-size: 2.5rem;
-            color: #007bff;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .service {
-            flex: 0 1 calc(33% - 10px);
-            background-color: #f0f0f0;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        .service h3 {
-            color: #007bff;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+
         footer {
             text-align: center;
             padding: 10px 0;
@@ -87,14 +74,25 @@
             color: #fff;
             margin-top: 20px;
         }
-
-        /* استایل مخصوص بخش درباره ما */
-        #about p {
-            font-size: 1.2rem; /* اندازه فونت برای خوانایی بهتر */
-            line-height: 1.8;
-            text-align: justify;
-            margin-top: 20px;
-        }
-
     </style>
 </head>
+<body>
+    <header>
+        <h1>موسسه مشاوره تحصیلی و پایان‌نامه‌نویسی مهرگان</h1>
+        <p>ارائه خدمات تخصصی مشاوره، نگارش و ویرایش پایان‌نامه</p>
+    </header>
+    <nav>
+        <a href="#about">درباره ما</a>
+        <a href="#services">خدمات</a>
+        <a href="#portfolio">نمونه‌کارها</a>
+        <a href="#contact">تماس با ما</a>
+    </nav>
+    <section class="hero">
+        <h1>به موسسه مهرگان خوش آمدید</h1>
+        <p>با ما در مسیر موفقیت تحصیلی همراه شوید</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 دفتر پایان‌نامه‌نویسی مهرگان. تمامی حقوق محفوظ است.</p>
+    </footer>
+</body>
+</html>
