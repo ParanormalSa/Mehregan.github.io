@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دفتر پایان‌نامه‌نویسی مهرگان</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Iran Sans', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0056b3;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            background-color: #004494;
+        }
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #007bff;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .service {
+            flex: 0 1 calc(33% - 10px);
+            background-color: #f0f0f0;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .service h3 {
+            color: #007bff;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #0056b3;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>دفتر پایان‌نامه‌نویسی مهرگان</h1>
+        <p>ارائه خدمات تخصصی مشاوره، نگارش و ویرایش پایان‌نامه</p>
+    </header>
+    <nav>
+        <a href="#about">درباره ما</a>
+        <a href="#services">خدمات</a>
+        <a href="#portfolio">نمونه‌کارها</a>
+        <a href="#contact">تماس با ما</a>
+    </nav>
+    <section class="hero">
+        <h1>به دفتر مهرگان خوش آمدید</h1>
+        <p>با ما در مسیر موفقیت تحصیلی همراه شوید</p>
+    </section>
+    <section id="about">
+        <h2>درباره ما</h2>
+        <p>دفتر مهرگان با بیش از 10 سال سابقه در زمینه نگارش، مشاوره و ویرایش پایان‌نامه‌ها و مقالات علمی، آماده ارائه خدمات تخصصی به دانشجویان و محققان گرامی است.</p>
+    </section>
+    <section id="services">
+        <h2>خدمات ما</h2>
+        <div class="services">
+            <div class="service">
+                <h3>مشاوره پایان‌نامه</h3>
+                <p>راهنمایی در انتخاب موضوع، نگارش پروپوزال و مدیریت پروژه تحقیقاتی.</p>
+            </div>
+            <div class="service">
+                <h3>ویرایش و نگارش</h3>
+                <p>ویرایش تخصصی و نگارش استاندارد پایان‌نامه و مقالات علمی.</p>
+            </div>
+            <div class="service">
+                <h3>تحلیل آماری</h3>
+                <p>انجام تحلیل‌های آماری و طراحی پرسشنامه‌های تحقیقاتی.</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>نمونه‌کارها</h2>
+        <p>به‌زودی بخش نمونه‌کارهای ما به‌روزرسانی خواهد شد.</p>
+    </section>
+    <section id="contact">
+        <h2>تماس با ما</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="نام شما" required>
+            <input type="email" name="email" placeholder="ایمیل شما" required>
+            <textarea name="message" rows="5" placeholder="پیام شما"></textarea>
+            <button type="submit">ارسال پیام</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 دفتر پایان‌نامه‌نویسی مهرگان. تمامی حقوق محفوظ است.</p>
+    </footer>
+</body>
+</html>
