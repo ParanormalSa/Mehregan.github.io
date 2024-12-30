@@ -16,28 +16,36 @@
         nav {
             background-color: #333;
             text-align: center;
-            padding: 15px 0;
+            padding: 10px 0;
+            box-shadow: 0 4px 2px -2px gray;
         }
 
         nav a {
             color: #fff;
             padding: 15px 25px;
             text-decoration: none;
-            font-size: 1.1rem;
-            margin: 0 10px;
+            font-size: 1.2rem;
+            margin: 0 20px;
             display: inline-block;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         nav a:hover {
             background-color: #007bff;
             border-radius: 5px;
+            transform: scale(1.1);
         }
 
         /* استایل برای لینک‌های فعال */
         nav .active {
             background-color: #0056b3;
             font-weight: bold;
+        }
+
+        /* استایل محتوای صفحه */
+        section {
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -59,6 +67,18 @@
     <section id="home">
         <h2>خانه</h2>
         <p>به موسسه مهرگان خوش آمدید. با ما در مسیر موفقیت تحصیلی همراه شوید.</p>
+    </section>
+    <section id="about">
+        <h2>درباره ما</h2>
+        <p>ما خدمات مشاوره، نگارش و ویرایش پایان‌نامه در تمام رشته‌ها و گرایش‌ها ارائه می‌دهیم.</p>
+    </section>
+    <section id="services">
+        <h2>خدمات ما</h2>
+        <p>در این بخش، خدمات مختلف ما برای شما معرفی می‌شود.</p>
+    </section>
+    <section id="contact">
+        <h2>تماس با ما</h2>
+        <p>برای مشاوره و سوالات بیشتر، با ما تماس بگیرید.</p>
     </section>
 </body>
 </html>
