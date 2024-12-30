@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دفتر پایان‌نامه‌نویسی مهرگان</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>موسسه مشاوره تحصیلی مهرگان</title>
+    
+    <!-- لینک به فونت -->
+    <link href="URL-TO-FONT-CDN" rel="stylesheet">
+    
+    <!-- استایل‌های داخلی -->
     <style>
+        @font-face {
+            font-family: 'B Nazanin';
+            src: url('./fonts/BNazanin.woff2') format('woff2'),
+                 url('./fonts/BNazanin.woff') format('woff'),
+                 url('./fonts/BNazanin.ttf') format('truetype');
+        }
+
         body {
-            font-family: 'Iran Sans', sans-serif;
+            font-family: 'B Nazanin', sans-serif;
             background-color: #f9f9f9;
             margin: 0;
             padding: 0;
@@ -27,9 +38,10 @@
         }
         nav a {
             color: #fff;
-            padding: 10px 20px;
+            padding: 15px 25px;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold; /* بولد کردن فونت منو */
         }
         nav a:hover {
             background-color: #004494;
@@ -83,11 +95,20 @@
             color: #fff;
             margin-top: 20px;
         }
+
+        /* استایل مخصوص بخش درباره ما */
+        #about p {
+            font-size: 1.2rem; /* اندازه فونت برای خوانایی بهتر */
+            line-height: 1.8;
+            text-align: justify;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>دفتر پایان‌نامه‌نویسی مهرگان</h1>
+        <h1>موسسه مشاوره تحصیلی و پایان‌نامه‌نویسی مهرگان</h1>
         <p>ارائه خدمات تخصصی مشاوره، نگارش و ویرایش پایان‌نامه</p>
     </header>
     <nav>
@@ -97,12 +118,12 @@
         <a href="#contact">تماس با ما</a>
     </nav>
     <section class="hero">
-        <h1>به دفتر مهرگان خوش آمدید</h1>
+        <h1>به موسسه مهرگان خوش آمدید</h1>
         <p>با ما در مسیر موفقیت تحصیلی همراه شوید</p>
     </section>
     <section id="about">
         <h2>درباره ما</h2>
-        <p>دفتر مهرگان با بیش از 10 سال سابقه در زمینه نگارش، مشاوره و ویرایش پایان‌نامه‌ها و مقالات علمی، آماده ارائه خدمات تخصصی به دانشجویان و محققان گرامی است.</p>
+        <p>دفتر مشاوره تحصیلی مهرگان با تجربه‌ای گسترده در تمامی رشته‌ها و گرایش‌های تحصیلی، خدمات تخصصی و جامع را به دانشجویان و پژوهشگران ارائه می‌دهد. ما با تکیه بر دانش روز و تسلط کامل به نرم‌افزارهای تحقیقاتی، در تمامی مراحل انتخاب موضوعات نوآورانه، ایده‌پردازی، و اجرای پژوهش همراه شما هستیم. همچنین، تیم ما با توانایی نگارش و ویرایش مقالات علمی بر اساس استانداردهای بین‌المللی، شما را در مسیر چاپ آثار علمی ارزشمند یاری می‌کند. تعهد ما به کیفیت و خلاقیت، پایه موفقیت پروژه‌های شما خواهد بود.</p>
     </section>
     <section id="services">
         <h2>خدمات ما</h2>
@@ -138,4 +159,4 @@
         <p>&copy; 2024 دفتر پایان‌نامه‌نویسی مهرگان. تمامی حقوق محفوظ است.</p>
     </footer>
 </body>
-</html>
+</html> 
