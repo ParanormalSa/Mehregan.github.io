@@ -22,17 +22,25 @@
             line-height: 1.6;
         }
 
-header {
-    background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/header-image.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 100px 0;
-    text-align: center;
-    position: relative;
-}
+        header {
+            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/header-image.jpg'); /* لینک تصویر درست */
+            background-size: cover; /* تصویر به طور کامل فضای هدر را می‌پوشاند */
+            background-position: center; /* تصویر در وسط هدر قرار می‌گیرد */
+            color: #fff;
+            padding: 100px 0; /* افزایش پدینگ برای فضای بهتر */
+            text-align: center;
+            position: relative;
+        }
 
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
 
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
 
         nav {
             display: flex;
@@ -45,7 +53,7 @@ header {
             padding: 15px 25px;
             text-decoration: none;
             font-size: 1.2rem;
-            font-weight: bold; /* بولد کردن فونت منو */
+            font-weight: bold;
         }
 
         nav a:hover {
@@ -59,11 +67,6 @@ header {
             background: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
         }
 
         footer {
@@ -89,6 +92,40 @@ header {
     <section class="hero">
         <h1>به موسسه مهرگان خوش آمدید</h1>
         <p>با ما در مسیر موفقیت تحصیلی همراه شوید</p>
+    </section>
+    <section id="about">
+        <h2>درباره ما</h2>
+        <p>دفتر مشاوره تحصیلی مهرگان با تجربه‌ای گسترده در تمامی رشته‌ها و گرایش‌های تحصیلی، خدمات تخصصی و جامع را به دانشجویان و پژوهشگران ارائه می‌دهد. ما با تکیه بر دانش روز و تسلط کامل به نرم‌افزارهای تحقیقاتی، در تمامی مراحل انتخاب موضوعات نوآورانه، ایده‌پردازی، و اجرای پژوهش همراه شما هستیم. همچنین، تیم ما با توانایی نگارش و ویرایش مقالات علمی بر اساس استانداردهای بین‌المللی، شما را در مسیر چاپ آثار علمی ارزشمند یاری می‌کند. تعهد ما به کیفیت و خلاقیت، پایه موفقیت پروژه‌های شما خواهد بود.</p>
+    </section>
+    <section id="services">
+        <h2>خدمات ما</h2>
+        <div class="services">
+            <div class="service">
+                <h3>مشاوره پایان‌نامه</h3>
+                <p>راهنمایی در انتخاب موضوع، نگارش پروپوزال و مدیریت پروژه تحقیقاتی.</p>
+            </div>
+            <div class="service">
+                <h3>ویرایش و نگارش</h3>
+                <p>ویرایش تخصصی و نگارش استاندارد پایان‌نامه و مقالات علمی.</p>
+            </div>
+            <div class="service">
+                <h3>تحلیل آماری</h3>
+                <p>انجام تحلیل‌های آماری و طراحی پرسشنامه‌های تحقیقاتی.</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>نمونه‌کارها</h2>
+        <p>به‌زودی بخش نمونه‌کارهای ما به‌روزرسانی خواهد شد.</p>
+    </section>
+    <section id="contact">
+        <h2>تماس با ما</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="نام شما" required>
+            <input type="email" name="email" placeholder="ایمیل شما" required>
+            <textarea name="message" rows="5" placeholder="پیام شما"></textarea>
+            <button type="submit">ارسال پیام</button>
+        </form>
     </section>
     <footer>
         <p>&copy; 2024 دفتر پایان‌نامه‌نویسی مهرگان. تمامی حقوق محفوظ است.</p>
