@@ -22,18 +22,15 @@
             line-height: 1.6;
         }
 
-        /* استایل هدر تغییر داده شده */
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 50px 0; /* افزایش پدینگ برای افزایش ارتفاع هدر */
-            text-align: center;
-            position: absolute; /* موقعیت هدر را ثابت می‌کنیم */
-            top: 50%; /* موقعیت هدر از بالای صفحه */
-            left: 50%; /* موقعیت هدر از سمت چپ صفحه */
-            transform: translate(-50%, -50%); /* این ویژگی برای تنظیم دقیق موقعیت به وسط صفحه است */
-            width: 100%; /* عرض هدر را 100% می‌کنیم */
-        }
+  header {
+    background-image: url('https://github.com/ParanormalSa/Mehregan.github.io/blob/main/header-image.jpg'); /* مسیر تصویر خود را قرار دهید */
+    background-size: cover; /* این ویژگی باعث می‌شود تصویر تمام فضای هدر را پوشش دهد */
+    background-position: center; /* این ویژگی باعث می‌شود تصویر در مرکز هدر قرار گیرد */
+    color: #fff;
+    padding: 100px 0; /* افزایش پدینگ برای نمایش بهتر تصویر */
+    text-align: center;
+    position: relative;
+}
 
         nav {
             display: flex;
