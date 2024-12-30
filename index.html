@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موسسه مشاوره تحصیلی مهرگان</title>
-    <link href="URL-TO-FONT-CDN" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'B Nazanin';
@@ -23,52 +22,26 @@
         }
 
         header {
-            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/header-image.jpg');
+            background-image: url('YOUR_HEADER_IMAGE_URL');
             background-size: cover;
             background-position: center;
-            color: #fff;
-            padding: 100px 0;
             text-align: center;
-            position: relative;
+            color: white;
+            padding: 100px 20px;
             margin-bottom: 50px;
         }
 
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            margin-top: 10px;
-        }
-
         nav {
-            display: flex;
-            justify-content: center;
             background-color: #0056b3;
-            padding: 10px 0;
+            padding: 10px;
+            text-align: center;
         }
 
         nav a {
-            color: #fff;
-            padding: 15px 25px;
+            color: white;
             text-decoration: none;
+            margin: 0 15px;
             font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            background-color: #004494;
-        }
-
-        section {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .services {
@@ -82,36 +55,55 @@
             background-color: #f8f9fa;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        .service h3 {
-            font-size: 1.5rem;
+        #consultation-request {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .consultation-form {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .consultation-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .consultation-form input,
+        .consultation-form select,
+        .consultation-form textarea {
+            width: 100%;
+            padding: 10px;
             margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        .service a {
-            text-decoration: none;
-            color: #007bff;
-        }
-
-        .service a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-        }
-
-        .service p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #0056b3;
+        .consultation-form button {
+            padding: 15px;
+            background-color: #007bff;
             color: #fff;
-            margin-top: 50px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .ad-space {
+            flex: 1;
+            text-align: center;
+        }
+
+        .ad-space img {
+            max-width: 100%;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -124,7 +116,6 @@
     <nav>
         <a href="#about">درباره ما</a>
         <a href="#services">خدمات</a>
-        <a href="#portfolio">نمونه‌کارها</a>
         <a href="#consultation-request">درخواست مشاوره</a>
         <a href="#contact">تماس با ما</a>
     </nav>
@@ -133,26 +124,56 @@
         <h2>خدمات ما</h2>
         <div class="services">
             <div class="service">
-                <h3><a href="/thesis-guidance.html">مشاوره پایان‌نامه</a></h3>
+                <h3>مشاوره پایان‌نامه</h3>
                 <p>راهنمایی در انتخاب موضوع، نگارش پروپوزال و مدیریت پروژه تحقیقاتی.</p>
             </div>
             <div class="service">
-                <h3><a href="/editing.html">ویرایش و نگارش</a></h3>
+                <h3>ویرایش و نگارش</h3>
                 <p>ویرایش تخصصی و نگارش استاندارد پایان‌نامه و مقالات علمی.</p>
             </div>
             <div class="service">
-                <h3><a href="/statistical-analysis.html">تحلیل آماری</a></h3>
+                <h3>تحلیل آماری</h3>
                 <p>انجام تحلیل‌های آماری و طراحی پرسشنامه‌های تحقیقاتی.</p>
             </div>
             <div class="service">
-                <h3><a href="/simulation.html">شبیه‌سازی</a></h3>
-                <p>تحلیل‌های نرم‌افزارهای مکانیک و عمران و المان محدود.</p>
+                <h3>شبیه‌سازی و تحلیل نرم‌افزاری</h3>
+                <p>تحلیل‌های نرم‌افزاری برای پروژه‌های مکانیک، عمران و المان محدود.</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 دفتر پایان‌نامه‌نویسی مهرگان. تمامی حقوق محفوظ است.</p>
-    </footer>
+    <section id="consultation-request">
+        <div class="consultation-form">
+            <h2>ثبت درخواست مشاوره</h2>
+            <form action="YOUR_BACKEND_SCRIPT_URL" method="POST">
+                <label for="name">نام و نام خانوادگی:</label>
+                <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید" required>
+
+                <label for="phone">شماره تماس:</label>
+                <input type="tel" id="phone" name="phone" placeholder="شماره تماس خود را وارد کنید" required>
+
+                <label for="field">رشته تحصیلی:</label>
+                <input type="text" id="field" name="field" placeholder="رشته تحصیلی خود را وارد کنید" required>
+
+                <label for="email">ایمیل:</label>
+                <input type="email" id="email" name="email" placeholder="ایمیل خود را وارد کنید" required>
+
+                <label for="request-type">نوع درخواست:</label>
+                <select id="request-type" name="request-type" required>
+                    <option value="پایان‌نامه">پایان‌نامه</option>
+                    <option value="مقاله">مقاله</option>
+                    <option value="شبیه‌سازی">شبیه‌سازی</option>
+                </select>
+
+                <label for="message">توضیحات:</label>
+                <textarea id="message" name="message" rows="4" placeholder="توضیحات خود را وارد کنید"></textarea>
+
+                <button type="submit">ارسال درخواست</button>
+            </form>
+        </div>
+        <div class="ad-space">
+            <img src="YOUR_AD_IMAGE_URL" alt="تصویر تبلیغاتی">
+        </div>
+    </section>
 </body>
 </html>
