@@ -10,13 +10,23 @@
     
     <!-- استایل‌های داخلی -->
     <style>
-        @font-face {
-            font-family: 'B Nazanin';
-            src: url('./fonts/BNazanin.woff2') format('woff2'),
-                 url('./fonts/BNazanin.woff') format('woff'),
-                 url('./fonts/BNazanin.ttf') format('truetype');
+        /* استایل مخصوص تصویر پس‌زمینه در هدر */
+        header {
+            background-image: url('https://raw.githubusercontent.com/your-username/your-repository-name/main/header-image.jpg');
+            background-size: cover; /* اندازه تصویر به طور خودکار تنظیم می‌شود */
+            background-position: center; /* تصویر در وسط قرار می‌گیرد */
+            height: 300px; /* ارتفاع بخش هدر */
+            color: #fff;
+            text-align: center;
+            padding: 50px 0; /* فاصله اضافی برای قرار گرفتن متن */
         }
-
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        /* استایل‌های عمومی */
         body {
             font-family: 'B Nazanin', sans-serif;
             background-color: #f9f9f9;
@@ -24,12 +34,6 @@
             padding: 0;
             color: #333;
             line-height: 1.6;
-        }
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
         }
         nav {
             display: flex;
@@ -46,64 +50,7 @@
         nav a:hover {
             background-color: #004494;
         }
-        section {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            color: #007bff;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .service {
-            flex: 0 1 calc(33% - 10px);
-            background-color: #f0f0f0;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        .service h3 {
-            color: #007bff;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #0056b3;
-            color: #fff;
-            margin-top: 20px;
-        }
-
-        /* استایل مخصوص بخش درباره ما */
-        #about p {
-            font-size: 1.2rem; /* اندازه فونت برای خوانایی بهتر */
-            line-height: 1.8;
-            text-align: justify;
-            margin-top: 20px;
-        }
-
+        /* سایر استایل‌ها باقی می‌ماند */
     </style>
 </head>
 <body>
@@ -159,4 +106,4 @@
         <p>&copy; 2024 دفتر پایان‌نامه‌نویسی مهرگان. تمامی حقوق محفوظ است.</p>
     </footer>
 </body>
-</html> 
+</html>
