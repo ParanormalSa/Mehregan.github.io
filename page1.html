@@ -3,63 +3,468 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشاوره پایان‌نامه</title>
+    <title>مشاوره پایان نامه</title>
     <link href="URL-TO-FONT-CDN" rel="stylesheet">
     <style>
-        /* استایل‌های صفحه */
+        /* استایل‌های مشابه با استایل‌های صفحه اصلی */
+        @font-face {
+            font-family: 'B Nazanin';
+            src: url('./fonts/BNazanin.woff2') format('woff2'),
+                 url('./fonts/BNazanin.woff') format('woff'),
+                 url('./fonts/BNazanin.ttf') format('truetype');
+        }
+
         body {
             font-family: 'B Nazanin', sans-serif;
             background-color: #f9f9f9;
             margin: 0;
             padding: 0;
             color: #333;
+            line-height: 1.6;
         }
 
         header {
+            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/moshaver.jpg'); /* مسیر تصویر هدر */
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            padding: 100px 0;
             text-align: center;
-            background-color: #0056b3;
-            color: #fff;
-            padding: 50px 0;
+            position: relative;
+            margin-bottom: 50px;
         }
 
         header h1 {
-            font-size: 3rem;
+            color: #808080; /* تغییر رنگ فونت به سفید */
+            font-size: 4rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
             margin: 0;
         }
 
-        section {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .content img {
-            max-width: 100%;
-            height: auto;
+        header p {
+            font-size: 1.8rem;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            display: inline-block;
             border-radius: 10px;
+            color: #333;
+            margin-top: 10px;
         }
 
-        .content {
-            margin-top: 30px;
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0056b3;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #004494;
+        }
+
+        /* منوی کشویی */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0056b3;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #004494;
+        }
+
+        footer {
+            background: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/footer.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer .section {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px;
+        }
+
+        footer .section h3 {
+            border-bottom: 1px solid #555;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        footer .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .section ul li {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        footer .section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer .section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer .contact {
+            text-align: right;
+        }
+
+        footer .contact p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        footer .newsletter input[type="email"] {
+            width: 85%;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+
+        footer .newsletter button {
+            padding: 15px 25px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        footer .newsletter button:hover {
+            background-color: #0056b3;
+        }
+
+        footer .copyright {
+            margin-top: 25px;
+            border-top: 1px solid #555;
+            padding-top: 15px;
+            font-size: 16px;
+        }
+
+        .service-box {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 40px;
+    max-width: 900px; /* محدود کردن عرض کادر به 900px */
+    margin: 20px auto; /* مرکز قرار دادن کادر */
+}
+
+
+        .service-box h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .service-box p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .service-box ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .service-box ul li {
+            font-size: 1.1rem;
+        }
+
+        /* اصلاح استایل تصویر */
+        .service-box img {
+            max-width: 400px; /* محدود کردن عرض تصویر به 300px */
+            width: 100%; /* اگر تصویر کوچکتر از 300px بود، از عرض کامل استفاده کند */
+            height: auto; /* حفظ تناسب ابعاد تصویر */
+            margin: 20px auto; /* فاصله‌گذاری از بالا و پایین و مرکز قرار دادن تصویر */
+            display: block; /* مرکز قرار دادن تصویر */
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>مشاوره پایان‌نامه</h1>
+        <h1>خدمات ویرایش و نگارش پایان‌نامه</h1>
+        <p>خدمات ویرایش تخصصی و نگارش استاندارد برای پایان‌نامه و مقالات علمی</p>
     </header>
 
+    <nav>
+        <a href="https://paranormalsa.github.io/Mehregan.github.io/">خانه</a>
+        <a href="#about">درباره ما</a>
+        <a href="#services">خدمات</a>
+        <a href="#contact">تماس با ما</a>
+    </nav>
+
     <section>
-        <div class="content">
-            <p>در این صفحه می‌توانید اطلاعات مربوط به مشاوره پایان‌نامه را مشاهده کنید. خدمات مشاوره شامل کمک در انتخاب موضوع، نگارش فصول مختلف، و ویرایش نهایی است.</p>
-            <p>ما با استفاده از کارشناسان متخصص در این زمینه، می‌توانیم شما را در مراحل مختلف نوشتن پایان‌نامه همراهی کنیم.</p>
-            <img src="image.jpg" alt="مشاوره پایان‌نامه">
+        <div class="service-box">
+            <h3>خدمات ویرایش و نگارش</h3>
+            <p>ما در موسسه مهرگان خدمات ویرایش و نگارش حرفه‌ای برای پایان‌نامه‌ها، مقالات علمی و پروژه‌های تحقیقاتی شما ارائه می‌دهیم. این خدمات شامل:</p>
+            <ul>
+                <li>ویرایش نگارش و دستور زبان</li>
+                <li>اصلاح ساختار و منطق مطالب</li>
+                <li>بررسی منابع و ارجاعات</li>
+                <li>افزایش کیفیت نوشتار علمی</li>
+            </ul>
         </div>
+
+        <div class="service-box">
+            <h3>مشاوره در زمینه انتخاب موضع </h3>
+            <p>استفاده از منابع جدید و به‌روز در نگارش پایان‌نامه یا مقاله بسیار حائز اهمیت است، زیرا اطلاعات و داده‌های علمی به‌سرعت تغییر می‌کنند و روش‌های جدید پژوهش ممکن است به ظهور برسند. منابع به‌روز به شما این امکان را می‌دهند که از آخرین دستاوردها و یافته‌ها در رشته خود استفاده کنید. علاوه بر این، افزودن ایده‌ها و نوآوری‌های جدید به این منابع باعث می‌شود که پژوهش شما از حالت کلیشه‌ای خارج شده و جنبه‌های نوآورانه و ارزشمندتری پیدا کند. برای این کار، ضروری است که به بررسی و تحلیل دقیق منابع جدید پرداخته و ایده‌ها و دیدگاه‌های جدیدی را به‌طور مؤثر در قالب تحقیق خود بگنجانید. این رویکرد می‌تواند ارزش علمی تحقیق شما را بالا برده و اثرگذاری بیشتری در جامعه علمی داشته باشد.</p>
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/1.jpg" alt="ویرایش نگارش و دستور زبان">
+        </div>
+
+        <div class="service-box">
+            <h3>نگارش پروپوزال</h3>
+            <p>مشاوره در زمینه نگارش پروپوزال و نگارش آن یکی از مراحل حیاتی در فرآیند تحقیقاتی است که می‌تواند مسیر تحقیق شما را مشخص کند. یک پروپوزال پژوهشی باید به‌طور دقیق و حرفه‌ای اهداف تحقیق، روش‌ها، و منابع مورد نیاز را مشخص کند. مشاوره در این زمینه به شما کمک می‌کند تا طرح تحقیق خود را به‌طور واضح و منظم تنظیم کنید و از تمامی اصول و استانداردهای نگارشی و علمی پیروی کنید. در این فرآیند، مشاوران به شما آموزش می‌دهند که چگونه سوالات تحقیقاتی خود را به درستی تعریف کرده و روش‌شناسی مناسبی برای جمع‌آوری و تحلیل داده‌ها انتخاب کنید. علاوه بر این، به شما کمک می‌کنند تا منابع معتبر و جدید را شناسایی کرده و به درستی در پروپوزال خود ارجاع دهید. نگارش پروپوزال به‌طور صحیح و جامع، فرصتی برای جلب توجه داوران و اساتید فراهم می‌آورد و نشان می‌دهد که تحقیق شما پایه و مبنای علمی محکمی دارد.</p>
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/2.jpg" alt="اصلاح ساختار و منطق مطالب">
+        </div>
+
+        <div class="service-box">
+    <h3>نگارش فصول پایان‌نامه</h3>
+    <p>نگارش فصول پایان‌نامه یکی از بخش‌های حیاتی در فرآیند تحقیقاتی است که نیاز به دقت، رعایت اصول علمی و نگارشی، و سازماندهی دقیق مطالب دارد. در این فرآیند، هر فصل باید به‌طور مشخص و با توجه به هدف تحقیق، اطلاعات لازم را ارائه دهد. این فصول معمولاً شامل مقدمه، مروری بر ادبیات تحقیق، روش تحقیق، نتایج تحقیق و بحث و نتیجه‌گیری می‌شوند. نگارش هر فصل باید به‌گونه‌ای باشد که خواننده را درک بهتری از موضوع تحقیق بدهد و ارتباط منطقی میان فصول برقرار کند. تیم ما با ارائه مشاوره دقیق و حرفه‌ای در نگارش فصول، به شما کمک می‌کند تا پایان‌نامه‌ای شفاف، منظم و با استانداردهای علمی بنویسید.</p>
+    <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/3.png" alt="نگارش فصول پایان‌نامه">
+</div>
+
+        <div class="service-box">
+    <h3>آموزش برای آمادگی دفاع</h3>
+    <p>آمادگی برای دفاع از پایان‌نامه یکی از مراحل حساس در فرآیند نگارش آن است. در این جلسه حضوری، تمامی نکات ضروری برای ارائه دفاعیه، نحوه پاسخ‌گویی به سوالات داوران، و روش‌های مؤثر برای ارائه محتوای علمی آموزش داده می‌شود. این دوره به‌صورت 0 تا 100 و از ابتدا تا انتها، تمامی مراحل دفاع را پوشش می‌دهد. از جمله مباحثی که در این جلسه بررسی می‌شود، می‌توان به نحوه آماده‌سازی اسلایدها، چگونگی کنترل استرس و اضطراب در زمان دفاع، نحوه تعامل با داوران و تکنیک‌های تسلط بر جلسه اشاره کرد. هدف ما این است که شما را برای برگزاری یک دفاع موفق و مؤثر آماده کنیم تا با اعتماد به نفس کامل از پایان‌نامه خود دفاع کنید.</p>
+    <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/4.jpg" alt="آمادگی دفاع از پایان‌نامه">
+</div>
+
     </section>
+ </head>
+<body>
+<section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
+    <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center;">ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
+        <p style="text-align: center;">در صورت نیاز به مشاوره پایان‌نامه و پذیرش مقاله ISI، فرم زیر را تکمیل کنید تا مشاوران ما با شما تماس بگیرند.</p>
+        <form action="YOUR_BACKEND_SCRIPT_URL" method="POST" style="display: grid; gap: 10px;">
+            <input type="text" name="name" placeholder="نام و نام خانوادگی" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" name="phone" placeholder="شماره تماس" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" name="field" placeholder="رشته و گرایش" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required></textarea>
+            <button type="submit" style="padding: 10px; background-color: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer;">ارسال</button>
+        </form>
+    </div>
+    <div style="flex: 1; max-width: 600px; text-align: center; padding: 20px;">
+        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/book.jpg" alt="مشاوره پایان‌نامه" style="max-width: 100%; border-radius: 8px;">
+    </div>
+</section>
+
+<style>
+    #consultation-request {
+        background-color: #f8f9fa;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #consultation-request h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+
+    .consultation-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-row label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    .form-row textarea {
+        resize: vertical;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+ </head>
+<body>
+<section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
+    <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center;">ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
+        <p style="text-align: center;">در صورت نیاز به مشاوره پایان‌نامه و پذیرش مقاله ISI، فرم زیر را تکمیل کنید تا مشاوران ما با شما تماس بگیرند.</p>
+        <form action="YOUR_BACKEND_SCRIPT_URL" method="POST" style="display: grid; gap: 10px;">
+            <input type="text" name="name" placeholder="نام و نام خانوادگی" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" name="phone" placeholder="شماره تماس" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" name="field" placeholder="رشته و گرایش" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required></textarea>
+            <button type="submit" style="padding: 10px; background-color: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer;">ارسال</button>
+        </form>
+    </div>
+    <div style="flex: 1; max-width: 600px; text-align: center; padding: 20px;">
+        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/book.jpg" alt="مشاوره پایان‌نامه" style="max-width: 100%; border-radius: 8px;">
+    </div>
+</section>
+
+<style>
+    #consultation-request {
+        background-color: #f8f9fa;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #consultation-request h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+
+    .consultation-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-row label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    .form-row textarea {
+        resize: vertical;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+</body>
+</html>
+
+    <footer>
+        <div class="container">
+            <div class="section">
+                <h3>گروه مهرگان</h3>
+                <ul>
+                    <li><a href="#">درباره گروه مشاوره مهرگان</a></li>
+                    <li><a href="#">قوانین و مقررات</a></li>
+                    <li><a href="#">سوالات متداول برای نگارش پایان نامه</a></li>
+                    <li><a href="#">سوالات متداول برای نوشتن پروپوزال</a></li>
+                    <li><a href="#">سوالات متداول برای نگارش مقاله</a></li>
+                </ul>
+            </div>
+            <div class="section contact">
+                <h3>ارتباط با ما</h3>
+                <p>تهران، میدان انقلاب، پاساژ اندیشه</p>
+                <p>طبقه اول دفتر فنی مهندسی مهرگان</p>
+                <p>تلفن: 021-66487889</p>
+                <p>موبایل: 09351329909</p>
+            </div>
+        </div>
+        <div class="copyright">
+            تمامی کالاها و خدمات این سایت تابع قوانین جمهوری اسلامی ایران است. <br>
+            Copyright © Mehregan Group
+        </div>
+    </footer>
 
 </body>
 </html>
