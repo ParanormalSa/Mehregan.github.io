@@ -1,77 +1,26 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تغییر پس‌زمینه</title>
-    <style>
-        body {
-            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/backgrund.jpg'); /* آدرس تصویر خود را اینجا وارد کنید */
-            background-size: cover;
-            background-position: center center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* بقیه استایل‌های سایت */
-        header {
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.5); /* برای کمی تاری روی پس‌زمینه */
-            color: white;
-            padding: 50px 0;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        section {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-    </style>
-</head>
-<body>
-
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موسسه مشاوره تحصیلی مهرگان</title>
-    
-    <!-- لینک به فونت -->
-    <link href="URL-TO-FONT-CDN" rel="stylesheet">
-    
+    <!-- لینک به فونت‌ها -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
+    <link href="https://cdn.fontcdn.ir/font/BNazanin/BNazanin.css" rel="stylesheet">
+
     <!-- استایل‌های داخلی -->
     <style>
-        @font-face {
-            font-family: 'B Nazanin';
-            src: url('./fonts/BNazanin.woff2') format('woff2'),
-                 url('./fonts/BNazanin.woff') format('woff'),
-                 url('./fonts/BNazanin.ttf') format('truetype');
-        }
-
         body {
             font-family: 'B Nazanin', sans-serif;
-            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
         }
 
         header {
-            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/header-image.jpg'); /* مسیر تصویر هدر */
+            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/header-image.jpg');
             background-size: cover;
             background-position: center;
             color: #fff;
@@ -82,8 +31,8 @@
         }
 
         header h1 {
-            color: #000;
             font-size: 4rem;
+            color: #000;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
             margin: 0;
         }
@@ -98,11 +47,13 @@
             margin-top: 10px;
         }
 
+        /* منوی اصلی */
         nav {
             display: flex;
             justify-content: center;
             background-color: #0056b3;
             padding: 10px 0;
+            position: relative;
         }
 
         nav a {
@@ -111,49 +62,70 @@
             text-decoration: none;
             font-size: 1.2rem;
             font-weight: bold;
+            display: block;
         }
 
         nav a:hover {
             background-color: #004494;
         }
 
-        section {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* منوی کشویی */
+        .dropdown {
+            position: relative;
+            display: inline-block;
         }
 
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0056b3;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #004494;
+        }
+
+        /* بخش Hero */
         .hero {
             text-align: center;
-            padding: 50px 20px;
-            margin-bottom: 50px;
+            background-color: #FFEB3B;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
         }
 
         .hero p {
             font-size: 1.2rem;
             color: #555;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #0056b3;
-            color: #fff;
-            margin-top: 50px;
+            line-height: 1.6;
         }
 
         /* استایل فرم مشاوره */
         #consultation-request {
             background-color: #f8f9fa;
-            padding: 30px;
-            margin: 30px auto;
+            padding: 20px;
+            margin: 20px auto;
             max-width: 800px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -161,30 +133,12 @@
 
         #consultation-request h2 {
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #007bff;
             margin-bottom: 20px;
         }
 
-        .consultation-form label {
-            font-size: 1rem;
-            margin-top: 10px;
-            display: block;
-            color: #333;
-        }
-
-        .consultation-form input,
-        .consultation-form select,
-        .consultation-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .consultation-form button {
+        button {
             width: 100%;
             padding: 15px;
             background-color: #007bff;
@@ -193,163 +147,14 @@
             border-radius: 5px;
             font-size: 1.2rem;
             cursor: pointer;
+            margin-top: 20px;
         }
 
-        .consultation-form button:hover {
+        button:hover {
             background-color: #0056b3;
         }
 
-        /* فرم تماس با ما */
-        .contact-form input,
-        .contact-form textarea {
-            padding: 10px;
-            margin: 10px 0;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact-form button {
-            padding: 12px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-
-        .contact-form button:hover {
-            background-color: #0056b3;
-        }
-
-    </style>
-</head>
-<body>
-    <header>
-        <h1> موسسه علمی و پژوهشی مهرگان</h1>
-        <p>ارائه خدمات تخصصی مشاوره، نگارش و ویرایش پایان‌نامه و مقاله</p>
-    </header>
-
-   <nav>
-    <a href="https://paranormalsa.github.io/Mehregan.github.io/">خانه</a>
-    <a href="#about">درباره ما</a>
-    
-    <!-- منوی کشویی "خدمات" -->
-    <div class="dropdown">
-        <a href="#">خدمات</a>
-        <div class="dropdown-content">
-            <a href="page1.html" target="_blank">مشاوره پایان‌نامه</a>
-            <a href="page2.html" target="_blank">ویرایش و نگارش</a>
-            <a href="page3.html" target="_blank">تحلیل آماری</a>
-            <a href="page4.html" target="_blank">شبیه‌سازی</a>
-        </div>
-    </div>
-    
-    <a href="#portfolio">نمونه‌کارها</a>
-    <a href="contact.html">تماس با ما</a>
-</nav>
-
-<!-- استایل‌های CSS برای منوی کشویی -->
-<style>
-    nav {
-        display: flex;
-        justify-content: center;
-        background-color: #0056b3;
-        padding: 10px 0;
-        position: relative;
-    }
-
-    nav a {
-        color: #fff;
-        padding: 15px 25px;
-        text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: bold;
-        display: block;
-    }
-
-    nav a:hover {
-        background-color: #004494;
-    }
-
-    /* منوی کشویی */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #0056b3;
-        min-width: 200px;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    .dropdown-content a {
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-    .dropdown-content a:hover {
-        background-color: #004494;
-    }
-</style>
-<section class="hero">
-    <h1>به موسسه مهرگان خوش آمدید</h1>
-    <p>با ما در مسیر موفقیت تحصیلی همراه شوید</p>
-</section>
-/* استایل برای بخش hero */
-.hero {
-    background-color: #FFEB3B;  /* رنگ زرد روشن برای پس‌زمینه */
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Vazir', sans-serif; /* استفاده از فونت فارسی Vazir */
-}
-
-/* استایل برای تیتر */
-.hero h1 {
-    font-family: 'Vazir', sans-serif;  /* فونت برای تیتر */
-    font-size: 3rem;  /* اندازه بزرگتر برای تیتر */
-    font-weight: bold;  /* ضخیم کردن فونت تیتر */
-    color: #333;  /* رنگ تیتر به رنگ تیره */
-    margin-bottom: 15px;  /* فاصله بین تیتر و متن */
-}
-
-/* استایل برای پاراگراف */
-.hero p {
-    font-family: 'Vazir', sans-serif;  /* فونت برای متن */
-    font-size: 1.2rem;  /* اندازه مناسب برای متن */
-    color: #555;  /* رنگ متن کمی روشن‌تر */
-    line-height: 1.6;  /* فاصله بین خطوط متن */
-    margin-top: 0;  /* حذف فاصله بالای متن */
-}
-
-    <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خدمات ما</title>
-    <style>
-        body {
-            font-family: 'B titr', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fffae8;
-            direction: rtl;
-        }
-
+        /* خدمات */
         .services-section {
             max-width: 1200px;
             margin: 0 auto;
@@ -399,212 +204,8 @@
             color: #555;
             line-height: 1.6;
         }
-    </style>
-</head>
-<body>
 
-<section class="services-section">
-    <h2>درباره ما</h2>
-    <div class="services-grid">
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon1.png" alt="مشاوره">
-            <h3>مشاوره رایگان پایان‌نامه و مقالات شما</h3>
-            <p>ارائه مشاوره تخصصی برای انتخاب موضوع و راهنمایی جهت آغاز پژوهش شما.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon2.png" alt="ارتباط مستقیم">
-            <h3>ارتباط مستقیم با اساتید رشته خود</h3>
-            <p>بدون واسطه و همراهی شبانه‌روزی در تمامی مراحل پژوهش.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon3.png" alt="فصل به فصل">
-            <h3>ارسال فصل به فصل و همفکری</h3>
-            <p>ارسال دقیق و شفاف فصل‌ها همراه با نظرات مشورتی و پژوهشی.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon4.png" alt="صرفه جویی">
-            <h3>صرفه‌جویی در زمان و هزینه‌های شما</h3>
-            <p>صرفه‌جویی کامل در تمامی هزینه‌ها و کاهش زمان پیشرفت پروژه‌ها.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon5.png" alt="آموزش">
-            <h3>آموزش کامل حضوری جهت آمادگی دفاع</h3>
-            <p>آموزش صفر تا صد تکنیک‌های دفاع به صورت حضوری توسط مشاوران ما.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon6.png" alt="پشتیبانی">
-            <h3>پشتیبانی 24 ساعته</h3>
-            <p>پاسخگویی به سوالات، اصلاحات و رفع اشکالات شما در سریع‌ترین زمان ممکن.</p>
-        </div>
-    </div>
-</section>
-
-</body>
-</html>
-
-
-<section id="services">
-    <h2>خدمات ما</h2>
-    <div class="services">
-        <div class="service">
-            <h3><a href="page1.html" target="_blank">مشاوره پایان‌نامه</a></h3>
-            <p>راهنمایی در انتخاب موضوع، نگارش پروپوزال و مدیریت پروژه تحقیقاتی.</p>
-        </div>
-        <div class="service">
-            <h3><a href="page2.html" target="_blank">ویرایش و نگارش</a></h3>
-            <p>ویرایش تخصصی و نگارش استاندارد پایان‌نامه و مقالات علمی.</p>
-        </div>
-        <div class="service">
-            <h3><a href="page3.html" target="_blank">تحلیل آماری</a></h3>
-            <p>انجام تحلیل‌های آماری و طراحی پرسشنامه‌های تحقیقاتی.</p>
-        </div>
-        <div class="service">
-            <h3><a href="page4.html" target="_blank">شبیه‌سازی</a></h3>
-            <p>تحلیل‌های نرم‌افزاری در زمینه‌های مکانیک و عمران، شامل مدل‌سازی و المان محدود.</p>
-        </div>
-    </div>
-</section>
-
-<style>
-    .services {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .service {
-        background-color: #f8f9fa;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-</style>
-
-
-    </head>
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ثبت درخواست مشاوره پایان‌نامه و مقاله</title>
-    
-    <!-- اضافه کردن فونت B Nazanin از طریق CDN -->
-    <link href="https://cdn.fontcdn.ir/font/BNazanin/BNazanin.css" rel="stylesheet">
-    
-    <style>
-        body {
-            margin: 0;
-            font-family: 'B Nazanin', sans-serif;
-            direction: rtl;
-        }
-
-        /* سایر استایل‌ها */
-        #consultation-request {
-            background-color: #f8f9fa;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        #consultation-request h2 {
-            text-align: center;
-            font-size: 1.8rem;
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-
-        button {
-            width: 100%;
-            padding: 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-<section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
-    <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <h2 style="text-align: center;">ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
-        <p style="text-align: center;">در صورت نیاز به مشاوره پایان‌نامه و پذیرش مقاله ISI، فرم زیر را تکمیل کنید تا مشاوران ما با شما تماس بگیرند.</p>
-        <form action="https://formspree.io/f/mzzzaqdr" method="POST" style="display: grid; gap: 10px;">
-            <input type="text" name="name" placeholder="نام و نام خانوادگی" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-            <input type="text" name="phone" placeholder="شماره تماس" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-            <input type="text" name="field" placeholder="رشته و گرایش" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-            <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required></textarea>
-            <button type="submit" style="padding: 10px; background-color: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer;">ارسال</button>
-        </form>
-    </div>
-    <div style="flex: 1; max-width: 600px; text-align: center; padding: 20px;">
-        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/book.jpg" alt="مشاوره پایان‌نامه" style="max-width: 100%; border-radius: 8px;">
-    </div>
-</section>
-
-</body>
-</html>
-
-
-    <!-- اسکریپت JavaScript -->
-    <script>
-        // برای استفاده از EmailJS
-        (function(){
-            emailjs.init("zV7S5e3XDRjM4drBB"); // User ID شما
-        })();
-
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // جلوگیری از ارسال فرم برای انجام اعتبارسنجی
-
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-            let message = document.getElementById("message").value;
-            let formMessage = document.getElementById("formMessage");
-
-            // اعتبارسنجی فرم
-            if (name === "" || email === "" || message === "") {
-                formMessage.textContent = "لطفاً همه فیلدها را پر کنید.";
-            } else if (!/\S+@\S+\.\S+/.test(email)) {
-                formMessage.textContent = "ایمیل معتبر وارد کنید.";
-            } else {
-                formMessage.textContent = ""; // پیام خطا را پاک می‌کنیم
-                
-                // ارسال ایمیل با استفاده از EmailJS
-                emailjs.sendForm('service_zd4xg3i', 'event_uLrtbYYiSMuhLWlyPSjusc5M', this)
-                    .then(function(response) {
-                        alert("پیام شما با موفقیت ارسال شد!");
-                    }, function(error) {
-                        alert("خطا در ارسال پیام. لطفاً دوباره تلاش کنید.");
-                    });
-            }
-        });
-    </script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فوتر</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            direction: rtl;
-        }
+        /* فوتر */
         footer {
             background: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/footer.jpg') no-repeat center center;
             background-size: cover;
@@ -612,6 +213,7 @@
             padding: 30px;
             text-align: center;
         }
+
         footer .container {
             display: flex;
             justify-content: space-around;
@@ -619,45 +221,51 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
         footer .section {
             flex: 1;
             min-width: 300px;
             padding: 15px;
         }
+
         footer .section h3 {
             border-bottom: 1px solid #555;
             padding-bottom: 15px;
             margin-bottom: 15px;
             font-size: 22px;
         }
+
         footer .section ul {
             list-style: none;
             padding: 0;
         }
+
         footer .section ul li {
             margin: 15px 0;
             font-size: 18px;
         }
+
         footer .section ul li a {
             color: #fff;
             text-decoration: none;
         }
+
         footer .section ul li a:hover {
             text-decoration: underline;
         }
-        footer .contact {
-            text-align: right;
-        }
+
         footer .contact p {
             margin: 10px 0;
             font-size: 18px;
         }
+
         footer .newsletter input[type="email"] {
             width: 85%;
             padding: 15px;
             margin: 15px 0;
             font-size: 16px;
         }
+
         footer .newsletter button {
             padding: 15px 25px;
             background-color: #007BFF;
@@ -666,9 +274,11 @@
             cursor: pointer;
             font-size: 16px;
         }
+
         footer .newsletter button:hover {
             background-color: #0056b3;
         }
+
         footer .copyright {
             margin-top: 25px;
             border-top: 1px solid #555;
@@ -679,31 +289,119 @@
 </head>
 <body>
 
-<footer>
-    <div class="container">
-        <div class="section">
-            <h3>گروه مهرگان</h3>
-            <ul>
-                <li><a href="#">درباره گروه مشاوره مهرگان</a></li>
-                <li><a href="#">قوانین و مقررات</a></li>
-                <li><a href="#">سوالات متداول برای نگارش پایان نامه</a></li>
-                <li><a href="#">سوالات متداول برای نوشتن پروپوزال</a></li>
-                <li><a href="#">سوالات متداول برای نگارش مقاله</a></li>
-            </ul>
+    <header>
+        <h1> موسسه علمی و پژوهشی مهرگان</h1>
+        <p>ارائه خدمات تخصصی مشاوره، نگارش و ویرایش پایان‌نامه و مقاله</p>
+    </header>
+
+    <nav>
+        <a href="https://paranormalsa.github.io/Mehregan.github.io/">خانه</a>
+        <a href="#about">درباره ما</a>
+        <div class="dropdown">
+            <a href="#">خدمات</a>
+            <div class="dropdown-content">
+                <a href="page1.html" target="_blank">مشاوره پایان‌نامه</a>
+                <a href="page2.html" target="_blank">ویرایش و نگارش</a>
+                <a href="page3.html" target="_blank">تحلیل آماری</a>
+                <a href="page4.html" target="_blank">شبیه‌سازی</a>
+            </div>
         </div>
-        <div class="section contact">
-            <h3>ارتباط با ما</h3>
-            <p>تهران، میدان انقلاب، پاساژ اندیشه</p>
-            <p>طبقه اول دفتر فنی مهندسی مهرگان</p>
-            <p>تلفن: 021-66487889</p>
-            <p>موبایل: 09351329909</p>
+        <a href="#portfolio">نمونه‌کارها</a>
+        <a href="contact.html">تماس با ما</a>
+    </nav>
+
+    <section class="hero">
+        <h1>به موسسه مهرگان خوش آمدید</h1>
+        <p>با ما در مسیر موفقیت تحصیلی همراه شوید</p>
+    </section>
+
+    <section id="services" class="services-section">
+        <h2>خدمات ما</h2>
+        <div class="services-grid">
+            <div class="service-box">
+                <h3><a href="page1.html" target="_blank">مشاوره پایان‌نامه</a></h3>
+                <p>راهنمایی در انتخاب موضوع، نگارش پروپوزال و مدیریت پروژه تحقیقاتی.</p>
+            </div>
+            <div class="service-box">
+                <h3><a href="page2.html" target="_blank">ویرایش و نگارش</a></h3>
+                <p>ویرایش تخصصی و نگارش استاندارد پایان‌نامه و مقالات علمی.</p>
+            </div>
+            <div class="service-box">
+                <h3><a href="page3.html" target="_blank">تحلیل آماری</a></h3>
+                <p>انجام تحلیل‌های آماری و طراحی پرسشنامه‌های تحقیقاتی.</p>
+            </div>
+            <div class="service-box">
+                <h3><a href="page4.html" target="_blank">شبیه‌سازی</a></h3>
+                <p>تحلیل‌های نرم‌افزاری در زمینه‌های مکانیک و عمران، شامل مدل‌سازی و المان محدود.</p>
+            </div>
         </div>
-    </div>
-    <div class="copyright">
-        تمامی کالاها و خدمات این سایت تابع قوانین جمهوری اسلامی ایران است. <br>
-        Copyright © Mehregan Group
-    </div>
-</footer>
+    </section>
+
+    <section id="consultation-request">
+        <h2>درخواست مشاوره</h2>
+        <form>
+            <label for="name">نام و نام خانوادگی</label>
+            <input type="text" id="name" name="name" placeholder="نام و نام خانوادگی" required>
+
+            <label for="email">ایمیل</label>
+            <input type="email" id="email" name="email" placeholder="ایمیل خود را وارد کنید" required>
+
+            <label for="phone">شماره تماس</label>
+            <input type="tel" id="phone" name="phone" placeholder="شماره تماس" required>
+
+            <label for="service">خدمات مورد نیاز</label>
+            <select id="service" name="service">
+                <option value="مشاوره پایان‌نامه">مشاوره پایان‌نامه</option>
+                <option value="ویرایش و نگارش">ویرایش و نگارش</option>
+                <option value="تحلیل آماری">تحلیل آماری</option>
+                <option value="شبیه‌سازی">شبیه‌سازی</option>
+            </select>
+
+            <label for="message">پیام</label>
+            <textarea id="message" name="message" rows="4" placeholder="پیام خود را بنویسید..."></textarea>
+
+            <button type="submit">ارسال درخواست</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="section">
+                <h3>درباره ما</h3>
+                <ul>
+                    <li><a href="#">موسسه مهرگان</a></li>
+                    <li><a href="#">چرا موسسه مهرگان؟</a></li>
+                    <li><a href="#">سیاست‌های ما</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>خدمات</h3>
+                <ul>
+                    <li><a href="#">مشاوره تحصیلی</a></li>
+                    <li><a href="#">خدمات ویرایش</a></li>
+                    <li><a href="#">پروژه‌های تخصصی</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>تماس با ما</h3>
+                <ul>
+                    <li>آدرس: تهران، خیابان دانشگاه</li>
+                    <li>تلفن: 021-12345678</li>
+                    <li>ایمیل: info@mehregan.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="newsletter">
+            <h3>عضویت در خبرنامه</h3>
+            <form>
+                <input type="email" placeholder="ایمیل خود را وارد کنید">
+                <button type="submit">عضویت</button>
+            </form>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 موسسه مهرگان. تمامی حقوق محفوظ است.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
