@@ -486,7 +486,6 @@
         color: #555;
     }
 </style>
-
 <section id="services">
     <div class="service-title">
         <h2>خدمات ما</h2>
@@ -512,10 +511,10 @@
 </section>
 
 <style>
-    /* بارگذاری فونت B Shiraz */
+    /* بارگذاری فونت B Mehr */
     @font-face {
-        font-family: 'B Shiraz';
-        src: url('fonts/BShiraz.ttf') format('truetype');
+        font-family: 'B Mehr';
+        src: url('https://fonts.googleapis.com/css2?family=B+Mehr&display=swap');
     }
 
     /* استایل عنوان خدمات ما */
@@ -525,7 +524,7 @@
     }
 
     .service-title h2 {
-        font-family: 'B Shiraz', sans-serif;
+        font-family: 'B Mehr', sans-serif;
         font-size: 2.5rem;
         color: #333;
         margin: 0;
@@ -544,7 +543,7 @@
     }
 
     .service {
-        background-color: #f8f9fa;
+        background-color: #5d9aeb; /* رنگ جدید باکس‌ها */
         padding: 25px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -552,6 +551,8 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         width: 100%; /* عرض باکس به صورت 100% از فضای در دسترس */
         max-width: 450px; /* حداکثر عرض باکس‌ها */
+        color: white; /* رنگ متن داخل باکس سفید */
+        font-family: 'B Mehr', sans-serif; /* فونت داخل باکس‌ها */
     }
 
     .service:hover {
@@ -560,28 +561,27 @@
     }
 
     .service h3 {
-        font-family: 'B Shiraz', sans-serif;
         font-size: 1.5rem;
         margin-bottom: 15px;
     }
 
     .service p {
-        font-family: 'B Shiraz', sans-serif;
         font-size: 1rem;
-        color: #555;
+        color: white; /* رنگ متن داخل باکس‌ها سفید */
     }
 
     /* استایل لینک‌ها */
     .service a {
         text-decoration: none;
-        color: #007bff;
+        color: white; /* رنگ لینک‌ها سفید */
         font-weight: bold;
     }
 
     .service a:hover {
-        color: #0056b3;
+        color: #f1f1f1; /* رنگ لینک‌ها در حالت hover */
     }
 </style>
+
 <body>
 <section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
     <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'B Shiraz', sans-serif;">
