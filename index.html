@@ -18,34 +18,29 @@
             color: #333;
             line-height: 1.6;
         }
+<style>
+    header {
+        font-family: 'B Mehr', sans-serif;
+        color: #fff; /* رنگ متن سفید برای خوانایی */
+        background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/header-image.jpg'); /* آدرس تصویر هدر */
+        background-size: cover; /* تصویر را به طور کامل در ابعاد هدر گسترش می‌دهد */
+        background-position: center; /* موقعیت تصویر را در مرکز قرار می‌دهد */
+        height: 100vh; /* ارتفاع هدر به اندازه کل ارتفاع صفحه */
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; /* متن‌ها را عمودی در مرکز قرار می‌دهد */
+        text-align: center; /* متن‌ها را به صورت مرکزی در عرض قرار می‌دهد */
+        margin: 0; /* حذف فضای اضافی در اطراف هدر */
+    }
 
-        header {
-            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/header-image.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-            margin-bottom: 50px;
-        }
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
 
-        header h1 {
-            font-size: 4rem;
-            color: #000;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.8rem;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 10px 20px;
-            display: inline-block;
-            border-radius: 10px;
-            color: #333;
-            margin-top: 10px;
-        }
+    header p {
+        font-size: 1.5rem;
+    }
 
        nav {
             display: flex;
@@ -429,26 +424,7 @@
         </div>
     </div>
 </section>
-    <style>
-    /* بارگذاری فونت B Shiraz */
-    @font-face {
-        font-family: 'B Shiraz';
-        src: url('fonts/BShiraz.ttf') format('truetype');
-    }
-
-    /* استایل عنوان خدمات ما */
-    .service-title {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .service-title h2 {
-        font-family: 'B Shiraz', sans-serif;
-        font-size: 2.5rem;
-        color: #333;
-        margin: 0;
-    }
-
+   
 </body>
 </html>
 
