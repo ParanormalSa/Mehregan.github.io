@@ -35,7 +35,7 @@
         }
 
         header h1 {
-            color: #808080; /* تغییر رنگ فونت به سفید */
+            color: white; /* تغییر رنگ فونت به سفید */; /* تغییر رنگ فونت به سفید */
             font-size: 4rem;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
             margin: 0;
@@ -436,35 +436,117 @@
     button:hover {
         background-color: #0056b3;
     }
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فوتر</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            direction: rtl;
+        }
+        footer {
+            background: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/footer.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer .section {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px;
+        }
+        footer .section h3 {
+            border-bottom: 1px solid #555;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        footer .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer .section ul li {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+        footer .section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer .section ul li a:hover {
+            text-decoration: underline;
+        }
+        footer .contact {
+            text-align: right;
+        }
+        footer .contact p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        footer .newsletter input[type="email"] {
+            width: 85%;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        footer .newsletter button {
+            padding: 15px 25px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        footer .newsletter button:hover {
+            background-color: #0056b3;
+        }
+        footer .copyright {
+            margin-top: 25px;
+            border-top: 1px solid #555;
+            padding-top: 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
 
-</body>
-</html>
-
-    <footer>
-        <div class="container">
-            <div class="section">
-                <h3>گروه مهرگان</h3>
-                <ul>
-                    <li><a href="#">درباره گروه مشاوره مهرگان</a></li>
-                    <li><a href="#">قوانین و مقررات</a></li>
-                    <li><a href="#">سوالات متداول برای نگارش پایان نامه</a></li>
-                    <li><a href="#">سوالات متداول برای نوشتن پروپوزال</a></li>
-                    <li><a href="#">سوالات متداول برای نگارش مقاله</a></li>
-                </ul>
-            </div>
-            <div class="section contact">
-                <h3>ارتباط با ما</h3>
-                <p>تهران، میدان انقلاب، پاساژ اندیشه</p>
-                <p>طبقه اول دفتر فنی مهندسی مهرگان</p>
-                <p>تلفن: 021-66487889</p>
-                <p>موبایل: 09351329909</p>
-            </div>
+<footer>
+    <div class="container">
+        <div class="section">
+            <h3>گروه مهرگان</h3>
+            <ul>
+                <li><a href="#">درباره گروه مشاوره مهرگان</a></li>
+                <li><a href="#">قوانین و مقررات</a></li>
+                <li><a href="#">سوالات متداول برای نگارش پایان نامه</a></li>
+                <li><a href="#">سوالات متداول برای نوشتن پروپوزال</a></li>
+                <li><a href="#">سوالات متداول برای نگارش مقاله</a></li>
+            </ul>
         </div>
-        <div class="copyright">
-            تمامی کالاها و خدمات این سایت تابع قوانین جمهوری اسلامی ایران است. <br>
-            Copyright © Mehregan Group
+        <div class="section contact">
+            <h3>ارتباط با ما</h3>
+            <p>تهران، میدان انقلاب، پاساژ اندیشه</p>
+            <p>طبقه اول دفتر فنی مهندسی مهرگان</p>
+            <p>تلفن: 021-66487889</p>
+            <p>موبایل: 09351329909</p>
         </div>
-    </footer>
+    </div>
+    <div class="copyright">
+        تمامی کالاها و خدمات این سایت تابع قوانین جمهوری اسلامی ایران است. <br>
+        Copyright © Mehregan Group
+    </div>
+</footer>
 
 </body>
 </html>
