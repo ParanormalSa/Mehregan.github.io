@@ -47,13 +47,14 @@
             margin-top: 10px;
         }
 
-        /* منوی اصلی */
-        nav {
+       nav {
             display: flex;
             justify-content: center;
             background-color: #0056b3;
             padding: 10px 0;
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -63,10 +64,12 @@
             font-size: 1.2rem;
             font-weight: bold;
             display: block;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
             background-color: #004494;
+            transform: translateY(-3px);
         }
 
         /* منوی کشویی */
