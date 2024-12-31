@@ -327,16 +327,79 @@
     }
 
 </body>
-</html>
-    <section id="contact">
-        <h2>تماس با ما</h2>
-        <form class="contact-form">
-            <input type="text" name="name" placeholder="نام شما" required>
-            <input type="email" name="email" placeholder="ایمیل شما" required>
-            <textarea name="message" rows="5" placeholder="پیام شما"></textarea>
-            <button type="submit">ارسال پیام</button>
-        </form>
-    </section>
+<section id="contact">
+    <h2>تماس با ما</h2>
+    <form class="contact-form" id="contactForm">
+        <input type="text" name="name" id="name" placeholder="نام شما" required>
+        <input type="email" name="email" id="email" placeholder="ایمیل شما" required>
+        <textarea name="message" id="message" rows="5" placeholder="پیام شما" required></textarea>
+        <button type="submit">ارسال پیام</button>
+    </form>
+    <p id="formMessage" style="color:red;"></p>
+</section>
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+// برای استفاده از EmailJS
+(function(){
+    emailjs.init("zV7S5e3XDRjM4drBB"); // User ID شما
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // جلوگیری از ارسال فرم برای انجام اعتبارسنجی
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+    let formMessage = document.getElementById("formMessage");
+
+    // اعتبارسنجی فرم
+    if (name === "" || email === "" || message === "") {
+        formMessage.textContent = "لطفاً همه فیلدها را پر کنید.";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+        formMessage.textContent = "ایمیل معتبر وارد کنید.";
+    } else {
+        formMessage.textContent = ""; // پیام خطا را پاک می‌کنیم
+        
+        // ارسال ایمیل با استفاده از EmailJS
+        emailjs.sendForm('service_zd4xg3i', 'event_uLrtbYYiSMuhLWlyPSjusc5M', this)
+            .then(function(response) {
+                alert("پیام شما با موفقیت ارسال شد!");
+            }, function(error) {
+                alert("خطا در ارسال پیام. لطفاً دوباره تلاش کنید.");
+            });
+    }
+});
 
     <footer>
         <p>&copy; 2024 دفتر پایان‌نامه‌نویسی مهرگان. تمامی حقوق محفوظ است.</p>
