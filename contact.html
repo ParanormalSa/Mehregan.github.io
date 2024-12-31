@@ -3,95 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تماس با ما | موسسه مشاوره تحصیلی مهرگان</title>
-    
+    <title>تماس با ما</title>
+
     <!-- لینک به فونت -->
-    <link href="URL-TO-FONT-CDN" rel="stylesheet">
-    
-    <!-- استایل‌های داخلی -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
+
     <style>
-        /* استایل مشابه صفحه شما */
         body {
-            font-family: 'B Nazanin', sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Vazir', sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
-            line-height: 1.6;
+            background-color: #f4f4f4;
         }
 
         header {
-            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/header-image.jpg'); 
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 100px 0;
+            background-color: #0056b3;
+            color: white;
             text-align: center;
-            position: relative;
-            margin-bottom: 50px;
+            padding: 20px 0;
         }
 
-        header h1 {
-            color: #000;
-            font-size: 4rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        h1 {
             margin: 0;
+            font-size: 2rem;
         }
 
-        header p {
-            font-size: 1.8rem;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 10px 20px;
-            display: inline-block;
-            border-radius: 10px;
-            color: #333;
-            margin-top: 10px;
-        }
-
-        nav {
+        .contact-form {
             display: flex;
-            justify-content: center;
-            background-color: #0056b3;
-            padding: 10px 0;
-        }
-
-        nav a {
-            color: #fff;
-            padding: 15px 25px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            background-color: #004494;
-        }
-
-        section {
-            max-width: 1200px;
-            margin: 20px auto;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 50px auto;
             padding: 20px;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #0056b3;
-            color: #fff;
-            margin-top: 50px;
-        }
-
-        /* فرم تماس با ما */
         .contact-form input,
         .contact-form textarea {
-            padding: 10px;
+            padding: 12px;
             margin: 10px 0;
-            width: 100%;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 1rem;
         }
 
         .contact-form button {
@@ -108,70 +62,75 @@
             background-color: #0056b3;
         }
 
+        .form-message {
+            color: red;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #0056b3;
+            color: white;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
     </style>
 </head>
-
 <body>
+
     <header>
         <h1>تماس با ما</h1>
-        <p>با ما در ارتباط باشید. خوشحال می‌شویم به شما کمک کنیم.</p>
     </header>
 
-    <nav>
-        <a href="/">خانه</a>
-        <a href="#about">درباره ما</a>
-        <a href="#services">خدمات</a>
-        <a href="#portfolio">نمونه‌کارها</a>
-        <a href="contact.html">تماس با ما</a>
-    </nav>
-
     <section id="contact">
-        <h2>فرم تماس با ما</h2>
         <form class="contact-form" id="contactForm">
             <input type="text" name="name" id="name" placeholder="نام شما" required>
             <input type="email" name="email" id="email" placeholder="ایمیل شما" required>
             <textarea name="message" id="message" rows="5" placeholder="پیام شما" required></textarea>
             <button type="submit">ارسال پیام</button>
+            <p id="formMessage" class="form-message"></p>
         </form>
-        <p id="formMessage" style="color:red;"></p>
     </section>
 
     <footer>
-        <p>&copy; 2024 دفتر پایان‌نامه‌نویسی مهرگان. تمامی حقوق محفوظ است.</p>
+        <p>&copy; 2024 دفتر مشاوره تحصیلی مهرگان. تمامی حقوق محفوظ است.</p>
     </footer>
 
-    <!-- اسکریپت JavaScript -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
     <script>
-        // برای استفاده از EmailJS
-        (function(){
-            emailjs.init("zV7S5e3XDRjM4drBB"); // User ID شما
-        })();
+        // Initialize EmailJS with your User ID
+        emailjs.init("zV7S5e3XDRjM4drBB");  // Replace with your EmailJS User ID
 
+        // Add event listener to the form
         document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // جلوگیری از ارسال فرم برای انجام اعتبارسنجی
+            event.preventDefault(); // Prevent form from refreshing the page
 
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-            let message = document.getElementById("message").value;
-            let formMessage = document.getElementById("formMessage");
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            const formMessage = document.getElementById("formMessage");
 
-            // اعتبارسنجی فرم
+            // Basic form validation
             if (name === "" || email === "" || message === "") {
                 formMessage.textContent = "لطفاً همه فیلدها را پر کنید.";
             } else if (!/\S+@\S+\.\S+/.test(email)) {
                 formMessage.textContent = "ایمیل معتبر وارد کنید.";
             } else {
-                formMessage.textContent = ""; // پیام خطا را پاک می‌کنیم
-                
-                // ارسال ایمیل با استفاده از EmailJS
+                formMessage.textContent = ""; // Clear error message
+
+                // Send email via EmailJS
                 emailjs.sendForm('service_zd4xg3i', 'event_uLrtbYYiSMuhLWlyPSjusc5M', this)
                     .then(function(response) {
                         alert("پیام شما با موفقیت ارسال شد!");
                     }, function(error) {
                         alert("خطا در ارسال پیام. لطفاً دوباره تلاش کنید.");
+                        console.error("خطا:", error);
                     });
             }
         });
     </script>
+
 </body>
 </html>
