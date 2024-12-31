@@ -247,31 +247,23 @@
 
     </head>
 <body>
-<section id="consultation-request">
-    <h2>ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
-    <form action="YOUR_BACKEND_SCRIPT_URL" method="POST" class="consultation-form">
-        <div class="form-row">
-            <label for="name">نام و نام خانوادگی:</label>
-            <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید" required>
-        </div>
-        <div class="form-row">
-            <label for="email">ایمیل:</label>
-            <input type="email" id="email" name="email" placeholder="ایمیل خود را وارد کنید" required>
-        </div>
-        <div class="form-row">
-            <label for="phone">شماره تماس:</label>
-            <input type="text" id="phone" name="phone" placeholder="شماره تماس خود را وارد کنید" required>
-        </div>
-        <div class="form-row">
-            <label for="field">رشته:</label>
-            <input type="text" id="field" name="field" placeholder="رشته تحصیلی خود را وارد کنید" required>
-        </div>
-        <div class="form-row">
-            <label for="request-type">نوع درخواست:</label>
-            <select id="request-type" name="request-type" required>
-                <option value="پایان‌نامه">پایان‌نامه</option>
-                <option value="مقاله">مقاله</option>
-            </select>
+<section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
+    <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center;">ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
+        <p style="text-align: center;">در صورت نیاز به مشاوره پایان‌نامه و پذیرش مقاله ISI، فرم زیر را تکمیل کنید تا مشاوران ما با شما تماس بگیرند.</p>
+        <form action="YOUR_BACKEND_SCRIPT_URL" method="POST" style="display: grid; gap: 10px;">
+            <input type="text" name="name" placeholder="نام و نام خانوادگی" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" name="phone" placeholder="شماره تماس" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" name="field" placeholder="رشته و گرایش" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required></textarea>
+            <button type="submit" style="padding: 10px; background-color: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer;">ارسال</button>
+        </form>
+    </div>
+    <div style="flex: 1; max-width: 600px; text-align: center; padding: 20px;">
+        <img src="YOUR_IMAGE_URL" alt="مشاوره پایان‌نامه" style="max-width: 100%; border-radius: 8px;">
+    </div>
+</section>
+
         </div>
         <div class="form-row">
             <label for="message">توضیحات:</label>
