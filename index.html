@@ -246,34 +246,102 @@
 
     </head>
 <body>
-    <section id="consultation-request">
-        <div class="consultation-form">
-            <h2>ثبت درخواست مشاوره</h2>
-            <form action="YOUR_BACKEND_SCRIPT_URL" method="POST">
-                <label for="name">نام و نام خانوادگی:</label>
-                <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید" required>
+<section id="consultation-request">
+    <h2>ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
+    <form action="YOUR_BACKEND_SCRIPT_URL" method="POST" class="consultation-form">
+        <div class="form-row">
+            <label for="name">نام و نام خانوادگی:</label>
+            <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید" required>
+        </div>
+        <div class="form-row">
+            <label for="email">ایمیل:</label>
+            <input type="email" id="email" name="email" placeholder="ایمیل خود را وارد کنید" required>
+        </div>
+        <div class="form-row">
+            <label for="phone">شماره تماس:</label>
+            <input type="text" id="phone" name="phone" placeholder="شماره تماس خود را وارد کنید" required>
+        </div>
+        <div class="form-row">
+            <label for="field">رشته:</label>
+            <input type="text" id="field" name="field" placeholder="رشته تحصیلی خود را وارد کنید" required>
+        </div>
+        <div class="form-row">
+            <label for="request-type">نوع درخواست:</label>
+            <select id="request-type" name="request-type" required>
+                <option value="پایان‌نامه">پایان‌نامه</option>
+                <option value="مقاله">مقاله</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="message">توضیحات:</label>
+            <textarea id="message" name="message" rows="4" placeholder="توضیحات خود را وارد کنید" required></textarea>
+        </div>
+        <button type="submit">ارسال درخواست</button>
+    </form>
+</section>
+<style>
+    #consultation-request {
+        background-color: #f8f9fa;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-                <label for="phone">شماره تماس:</label>
-                <input type="tel" id="phone" name="phone" placeholder="شماره تماس خود را وارد کنید" required>
+    #consultation-request h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
 
-                <label for="field">رشته تحصیلی:</label>
-                <input type="text" id="field" name="field" placeholder="رشته تحصیلی خود را وارد کنید" required>
+    .consultation-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 
-                <label for="email">ایمیل:</label>
-                <input type="email" id="email" name="email" placeholder="ایمیل خود را وارد کنید" required>
+    .form-row {
+        display: flex;
+        flex-direction: column;
+    }
 
-                <label for="request-type">نوع درخواست:</label>
-                <select id="request-type" name="request-type" required>
-                    <option value="پایان‌نامه">پایان‌نامه</option>
-                    <option value="مقاله">مقاله</option>
-                    <option value="شبیه‌سازی">شبیه‌سازی</option>
-                </select>
+    .form-row label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
 
-                <label for="message">توضیحات:</label>
-                <textarea id="message" name="message" rows="4" placeholder="توضیحات خود را وارد کنید"></textarea>
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
 
-                <button type="submit">ارسال درخواست</button>
-            </form>
+    .form-row textarea {
+        resize: vertical;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
         </div>
         <div class="ad-space">
             <img src="YOUR_AD_IMAGE_URL" alt="تصویر تبلیغاتی">
