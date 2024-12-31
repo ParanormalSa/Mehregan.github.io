@@ -351,7 +351,6 @@
         }
     </style>
 </head>
-
 <nav>
     <a href="https://paranormalsa.github.io/Mehregan.github.io/">صفحه اصلی</a>
     <a href="#about">درباره ما</a>
@@ -369,8 +368,9 @@
 </nav>
 
 <style>
+    /* اعمال فونت B Mehr برای منو */
     body {
-        font-family: 'B Mehr', sans-serif; /* فونت اصلی سایت */
+        font-family: 'B Mehr', sans-serif;
     }
 
     nav {
@@ -379,21 +379,25 @@
         background-color: #f8f9fa;
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
     }
 
     nav a {
-        font-size: 1.2rem; /* اندازه بزرگتر برای لینک‌ها */
-        padding: 12px 20px;
-        margin: 0 10px;
+        font-size: 1.5rem; /* اندازه بزرگتر برای لینک‌ها */
+        padding: 14px 20px;
+        margin: 0 15px;
         text-decoration: none;
         color: #333;
         transition: transform 0.3s ease, color 0.3s ease;
     }
 
+    /* هنگام هاور شدن، گزینه کمی بزرگتر می‌شود و به بالا حرکت می‌کند */
     nav a:hover {
-        transform: translateY(-3px); /* بالا آمدن گزینه */
+        transform: translateY(-5px); /* بالا آمدن گزینه */
+        color: #007bff; /* رنگ لینک هنگام هاور */
     }
 
+    /* استایل منوی کشویی */
     .dropdown {
         position: relative;
     }
@@ -408,6 +412,7 @@
         margin-top: 10px;
     }
 
+    /* نمایش محتوای منوی کشویی هنگام هاور */
     .dropdown:hover .dropdown-content {
         display: block;
     }
@@ -417,12 +422,16 @@
         text-decoration: none;
         color: #333;
         display: block;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease;
     }
 
+    /* استایل لینک‌های کشویی هنگام هاور */
     .dropdown-content a:hover {
-        background-color: #ddd;
+        background-color: #f1f1f1;
     }
 </style>
+
 </head>
 <body>
 
