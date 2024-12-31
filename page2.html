@@ -356,12 +356,64 @@
         background-color: #0056b3;
     }
  </head>
+    </head>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت درخواست مشاوره پایان‌نامه و مقاله</title>
+    
+    <!-- اضافه کردن فونت B Nazanin از طریق CDN -->
+    <link href="https://cdn.fontcdn.ir/font/BNazanin/BNazanin.css" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'B Nazanin', sans-serif;
+            direction: rtl;
+        }
+
+        /* سایر استایل‌ها */
+        #consultation-request {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #consultation-request h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
 <body>
 <section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
     <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
         <h2 style="text-align: center;">ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
         <p style="text-align: center;">در صورت نیاز به مشاوره پایان‌نامه و پذیرش مقاله ISI، فرم زیر را تکمیل کنید تا مشاوران ما با شما تماس بگیرند.</p>
-        <form action="YOUR_BACKEND_SCRIPT_URL" method="POST" style="display: grid; gap: 10px;">
+        <form action="https://formspree.io/f/mzzzaqdr" method="POST" style="display: grid; gap: 10px;">
             <input type="text" name="name" placeholder="نام و نام خانوادگی" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
             <input type="text" name="phone" placeholder="شماره تماس" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
             <input type="text" name="field" placeholder="رشته و گرایش" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
@@ -374,68 +426,8 @@
     </div>
 </section>
 
-<style>
-    #consultation-request {
-        background-color: #f8f9fa;
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 800px;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    #consultation-request h2 {
-        text-align: center;
-        font-size: 1.8rem;
-        color: #007bff;
-        margin-bottom: 20px;
-    }
-
-    .consultation-form {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .form-row {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .form-row label {
-        font-size: 1rem;
-        margin-bottom: 5px;
-    }
-
-    .form-row input,
-    .form-row select,
-    .form-row textarea {
-        padding: 12px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-size: 1rem;
-    }
-
-    .form-row textarea {
-        resize: vertical;
-    }
-
-    button {
-        width: 100%;
-        padding: 15px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2rem;
-        cursor: pointer;
-        margin-top: 20px;
-    }
-
-    button:hover {
-        background-color: #0056b3;
-    }
-
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
