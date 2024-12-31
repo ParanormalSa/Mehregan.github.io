@@ -422,7 +422,6 @@
 </body>
 </html>
 
-
 <section id="services">
     <h2>خدمات ما</h2>
     <div class="services">
@@ -448,20 +447,46 @@
 <style>
     .services {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* تعداد ستون‌ها به صورت اتوماتیک تنظیم می‌شود */
         gap: 20px;
         margin-top: 20px;
     }
 
     .service {
         background-color: #f8f9fa;
-        padding: 20px;
+        padding: 25px; /* کمی بیشتر از padding قبلی */
         border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service:hover {
+        transform: translateY(-5px); /* افکت شناور */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .service h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .service p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    /* لینک‌ها */
+    .service a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .service a:hover {
+        color: #0056b3;
     }
 </style>
-
 
     </head>
 <!DOCTYPE html>
