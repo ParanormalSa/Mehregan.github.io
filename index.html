@@ -445,24 +445,31 @@
 </section>
 
 <style>
+    /* تنظیمات گرید */
     .services {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* تعداد ستون‌ها به صورت اتوماتیک تنظیم می‌شود */
+        grid-template-columns: repeat(2, 1fr); /* دو ستون */
         gap: 20px;
         margin-top: 20px;
+        justify-items: center; /* مرکز کردن باکس‌ها */
+        max-width: 1200px; /* حداکثر عرض گرید */
+        margin-left: auto;
+        margin-right: auto; /* مرکز کردن کل گرید در صفحه */
     }
 
     .service {
         background-color: #f8f9fa;
-        padding: 25px; /* کمی بیشتر از padding قبلی */
+        padding: 25px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 100%; /* عرض باکس به صورت 100% از فضای در دسترس */
+        max-width: 450px; /* حداکثر عرض باکس‌ها */
     }
 
     .service:hover {
-        transform: translateY(-5px); /* افکت شناور */
+        transform: translateY(-5px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
@@ -476,7 +483,7 @@
         color: #555;
     }
 
-    /* لینک‌ها */
+    /* استایل لینک‌ها */
     .service a {
         text-decoration: none;
         color: #007bff;
