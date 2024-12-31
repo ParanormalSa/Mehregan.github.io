@@ -293,151 +293,80 @@
         <h1> موسسه علمی و پژوهشی مهرگان</h1>
         <p>ارائه خدمات تخصصی مشاوره، نگارش و ویرایش پایان‌نامه و مقاله</p>
     </header>
-<nav class="navbar">
-    <a href="https://paranormalsa.github.io/Mehregan.github.io/" class="logo">
-        <img src="/images/logos/logo.svg" alt="لوگو" width="130" height="24">
-    </a>
-    <ul class="menu">
-        <li><a href="https://paranormalsa.github.io/Mehregan.github.io/">خانه</a></li>
-        <li><a href="#about">درباره ما</a></li>
-        <li class="dropdown">
-            <a href="#">خدمات</a>
-            <div class="dropdown-content">
-                <a href="page1.html" target="_blank">مشاوره پایان‌نامه</a>
-                <a href="page2.html" target="_blank">ویرایش و نگارش</a>
-                <a href="page3.html" target="_blank">تحلیل آماری</a>
-                <a href="page4.html" target="_blank">شبیه‌سازی</a>
-            </div>
-        </li>
-        <li><a href="#portfolio">نمونه‌کارها</a></li>
-        <li><a href="contact.html">تماس با ما</a></li>
-    </ul>
-    <div class="login-btn">
-        <a href="/login" class="primaryBtn">
-            ورود / ثبت نام
-        </a>
-    </div>
-</nav>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
 
-<style>
-    /* استایل کلی ناوبری */
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
-        background-color: #fff;
-        box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.1);
-        position: sticky;
-        top: 0;
-        z-index: 20;
-    }
-
-    /* استایل منو */
-    .menu {
-        list-style: none;
-        display: flex;
-        gap: 30px;
-    }
-
-    .menu li {
-        position: relative;
-    }
-
-    .menu a {
-        text-decoration: none;
-        color: #4b4d4e;
-        font-weight: bold;
-        font-size: 16px;
-    }
-
-    /* استایل برای منوی کشویی */
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        z-index: 10;
-        min-width: 150px;
-    }
-
-    .dropdown-content a {
-        display: block;
-        padding: 10px 15px;
-        color: #333;
-        font-size: 14px;
-    }
-
-    .dropdown-content a:hover {
-        background-color: #f8f9fa;
-    }
-
-    /* استایل دکمه ورود */
-    .login-btn a {
-        padding: 12px 20px;
-        background-color: #007bff;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-    }
-
-    .login-btn a:hover {
-        background-color: #0056b3;
-    }
-
-    /* استایل موبایل */
-    @media (max-width: 768px) {
-        .menu {
-            display: none;
-            flex-direction: column;
-            gap: 15px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+        nav {
             background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 100;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        .navbar .menu-toggle {
-            display: block;
-            cursor: pointer;
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
         }
 
-        .menu-toggle svg {
-            width: 30px;
-            height: 30px;
+        nav a:hover {
+            color: #216502;
         }
 
-        .menu.open {
-            display: flex;
+        .dropdown {
+            position: relative;
+            display: inline-block;
         }
 
-        /* منو کشویی برای موبایل */
         .dropdown-content {
-            position: static;
-            box-shadow: none;
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: left;
         }
 
-        .menu li a {
-            font-size: 18px;
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
-    }
 
-    /* آیکون منوی موبایل */
-    .menu-toggle {
-        display: none;
-    }
-</style>
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<nav>
+    <a href="https://paranormalsa.github.io/Mehregan.github.io/">صفحه اصلی</a>
+    <a href="#about">درباره ما</a>
+    <div class="dropdown">
+        <a href="#">خدمات</a>
+        <div class="dropdown-content">
+            <a href="page1.html" target="_blank">مشاوره پایان‌نامه</a>
+            <a href="page2.html" target="_blank">ویرایش و نگارش</a>
+            <a href="page3.html" target="_blank">تحلیل آماری</a>
+            <a href="page4.html" target="_blank">شبیه‌سازی</a>
+        </div>
+    </div>
+    <a href="#portfolio">نمونه‌کارها</a>
+    <a href="contact.html">تماس با ما</a>
+</nav>
 
     <section class="hero">
         <h1>به موسسه مهرگان خوش آمدید</h1>
