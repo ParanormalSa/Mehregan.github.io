@@ -295,7 +295,7 @@
     </header>
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-   <style>
+<style>
     /* فونت منو */
     nav {
         font-family: 'B Mehr', sans-serif;
@@ -318,10 +318,12 @@
         padding: 10px;
         display: inline-block;
         transition: all 0.3s ease;
+        outline: none; /* حذف کادر */
     }
 
     nav a:hover {
         transform: scale(1.1);
+        outline: none; /* حذف کادر هنگام hover */
         /* تغییر رنگ یا ظاهر برای hover حذف شد */
     }
 
@@ -414,9 +416,32 @@
             <a href="page4.html" target="_blank">شبیه‌سازی</a>
         </div>
     </div>
-    <a href="#portfolio">نمونه‌کارها</a>
+    <a href="#portfolio">مقالات اخیر</a>
     <a href="contact.html">تماس با ما</a>
 </nav>
+
+<section id="services">
+    <h2>خدمات ما</h2>
+    <div class="services">
+        <div class="service">
+            <h3><a href="page1.html" target="_blank">مشاوره پایان‌نامه</a></h3>
+            <p>راهنمایی در انتخاب موضوع، نگارش پروپوزال و مدیریت پروژه تحقیقاتی.</p>
+        </div>
+        <div class="service">
+            <h3><a href="page2.html" target="_blank">ویرایش و نگارش</a></h3>
+            <p>ویرایش تخصصی و نگارش استاندارد پایان‌نامه و مقالات علمی.</p>
+        </div>
+        <div class="service">
+            <h3><a href="page3.html" target="_blank">تحلیل آماری</a></h3>
+            <p>انجام تحلیل‌های آماری و طراحی پرسشنامه‌های تحقیقاتی.</p>
+        </div>
+        <div class="service">
+            <h3><a href="page4.html" target="_blank">شبیه‌سازی</a></h3>
+            <p>تحلیل‌های نرم‌افزاری در زمینه‌های مکانیک و عمران، شامل مدل‌سازی و المان محدود.</p>
+        </div>
+    </div>
+</section>
+
 
 <section class="services-section">
     <h2>درباره ما</h2>
