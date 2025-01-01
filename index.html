@@ -12,9 +12,6 @@
             <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/twitter.png" alt="Twitter">
         </a>
     </div>
-<link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="main/styles.css">
-
     <style>
         /* استایل آیکون‌های شبکه اجتماعی */
         .social-icons {
@@ -38,6 +35,73 @@
     </style>
 </head>
 </html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسلاید بار</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .slider-container {
+            width: 900px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .slider {
+            display: flex;
+            transition: transform 1s ease;
+        }
+        
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        /* تغییر رنگ و تنظیم هر اسلاید */
+        .slide:nth-child(odd) {
+            background-color: #4CAF50;
+        }
+
+        .slide:nth-child(even) {
+            background-color: #2196F3;
+        }
+
+        /* انیمیشن اسلاید */
+        @keyframes slideAnimation {
+            0% {
+                transform: translateX(0);
+            }
+            20% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .slider-container {
+            animation: slideAnimation 10s infinite;
+        }
+    </style>
+</head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -512,6 +576,25 @@
             background-color: rgba(0, 0, 0, 0.7);
         }
     </style>
+    <body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/pic/images/1.png" alt="اسلاید 1" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="slide">
+                <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/pic/images/2.jpg" alt="اسلاید 2" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="slide">
+                <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/pic/images/3.jpg" alt="اسلاید 3" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="slide">
+                <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/pic/images/4.jpg" alt="اسلاید 4" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 <div class="slider">
     <div class="slides">
         <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/pic/images/1.png" alt="اسلاید 1">
