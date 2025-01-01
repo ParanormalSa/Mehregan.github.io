@@ -415,6 +415,68 @@
     .dropdown-content a:hover {
         background-color: #f1f1f1;
     }
+    /* استایل های اسلاید بار */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.slidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.slidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.slidebar a:hover {
+    color: #f1f1f1;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    color: #818181;
+    text-decoration: none;
+}
+
+#main-content {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+/* وقتی اسلاید بار باز می‌شود */
+.slidebar.open {
+    width: 250px;
+}
 </style>
 <nav>
     <a href="https://paranormalsa.github.io/Mehregan.github.io/">صفحه اصلـــی</a>
@@ -429,10 +491,42 @@
         </div>
     </div>
     <a href="#portfolio">اخبار و مقالات</a>
+    <a href="#portfolio">دانلود پرسشنامه</a>
     <a href="contact.html">تماس با ما</a>
 </nav>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسلاید بار</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- دکمه باز کردن اسلاید بار -->
+    <span class="open-btn" onclick="openSlidebar()">☰</span>
+
+    <!-- اسلاید بار -->
+    <div id="slidebar" class="slidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeSlidebar()">&times;</a>
+        <a href="#">خانه</a>
+        <a href="#">درباره ما</a>
+        <a href="#">خدمات</a>
+        <a href="#">تماس با ما</a>
+    </div>
+
+    <div id="main-content">
+        <h1>محتوای اصلی سایت</h1>
+        <p>اینجا می‌توانید متن یا محتوای دیگر را قرار دهید.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>
