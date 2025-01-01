@@ -584,18 +584,14 @@
     </div>
 </body>
 </html>
-<!DOCTYPE html>
+
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>فوتر</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            direction: rtl;
-        }
+        /* استایل فوتر */
         footer {
             background: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/footer.jpg') no-repeat center center;
             background-size: cover;
@@ -666,6 +662,65 @@
             padding-top: 15px;
             font-size: 16px;
         }
+
+        /* فونت B Nazanin */
+        @font-face {
+            font-family: 'B Nazanin';
+            src: url('https://cdn.fontcdn.ir/fonts/bnazanin/BNazanin.ttf') format('truetype');
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            font-family: 'B Nazanin', sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin: 5px 0;
+        }
+
+        .section ul li a {
+            text-decoration: none;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .section ul li a:hover {
+            color: #007bff;
+        }
+
+        .section.contact p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #e9ecef;
+            font-size: 0.9rem;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -696,67 +751,6 @@
     </div>
 </footer>
 
-<style>
-    /* بارگذاری فونت B Nazanin */
-    @font-face {
-        font-family: 'B Nazanin';
-        src: url('https://cdn.fontcdn.ir/fonts/bnazanin/BNazanin.ttf') format('truetype');
-    }
-
-    /* استایل فوتر */
-    footer {
-        background-color: #f8f9fa;
-        padding: 40px 0;
-        font-family: 'B Nazanin', sans-serif;
-        direction: rtl;
-        text-align: right;
-    }
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .section h3 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-    }
-
-    .section ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .section ul li {
-        margin: 5px 0;
-    }
-
-    .section ul li a {
-        text-decoration: none;
-        color: #555;
-        font-size: 1rem;
-    }
-
-    .section ul li a:hover {
-        color: #007bff;
-    }
-
-    .section.contact p {
-        margin: 5px 0;
-        font-size: 1rem;
-    }
-
-    .copyright {
-        text-align: center;
-        padding: 10px 0;
-        background-color: #e9ecef;
-        font-size: 0.9rem;
-        color: #555;
-    }
-</style>
-
 </body>
 </html>
+
