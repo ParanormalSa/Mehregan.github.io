@@ -1,42 +1,81 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ویرایش و نگارش پایان‌نامه</title>
-    <link href="URL-TO-FONT-CDN" rel="stylesheet">
+    <div class="social-icons">
+        <a href="https://instagram.com/mehreganresearch" target="_blank" aria-label="Instagram">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://t.me/mehregangroup32" target="_blank" aria-label="Telegram">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/telegram.png" alt="Telegram">
+        </a>
+        <a href="https://twitter.com/yourpage" target="_blank" aria-label="Twitter">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/twitter.png" alt="Twitter">
+        </a>
+    </div>
+
     <style>
-        /* استایل‌های مشابه با استایل‌های صفحه اصلی */
-        @font-face {
-            font-family: 'B Nazanin';
-            src: url('./fonts/BNazanin.woff2') format('woff2'),
-                 url('./fonts/BNazanin.woff') format('woff'),
-                 url('./fonts/BNazanin.ttf') format('truetype');
+        /* استایل آیکون‌های شبکه اجتماعی */
+        .social-icons {
+            position: fixed;
+            top: 10px; /* فاصله از بالای صفحه */
+            left: 20px; /* تغییر فاصله از سمت چپ (1 سانتی‌متر) */
+            display: flex;
+            gap: 10px; /* فاصله بین آیکون‌ها */
+            z-index: 1000; /* اطمینان از اینکه همیشه بالای سایر المان‌ها است */
         }
 
+        .social-icons a img {
+            width: 25px; /* اندازه کوچکتر آیکون‌ها */
+            height: 25px; /* اندازه کوچکتر آیکون‌ها */
+            transition: transform 0.3s ease; /* افکت هنگام هاور */
+        }
+
+        .social-icons a img:hover {
+            transform: scale(1.2); /* بزرگتر شدن آیکون هنگام هاور */
+        }
+    </style>
+</head>
+</html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موسسه مشاوره تحصیلی مهرگان</title>
+    <!-- لینک به فونت‌ها -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
+    <link href="https://cdn.fontcdn.ir/font/BNazanin/BNazanin.css" rel="stylesheet">
+
+    <!-- استایل‌های داخلی -->
+    <style>
         body {
             font-family: 'B Nazanin', sans-serif;
-            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
         }
 
         header {
-            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/moshaver.jpg'); /* مسیر تصویر هدر */
+            background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/header-image.jpg');
             background-size: cover;
             background-position: center;
-            color: white; 
+            color: #fff;
             padding: 100px 0;
             text-align: center;
             position: relative;
             margin-bottom: 50px;
         }
-
+   header img {
+            width: 400px; /* تنظیم عرض لوگو */
+            height: auto; /* حفظ تناسب ابعاد */
+            margin-bottom: 10px; /* فاصله از متن */
+            display: block; /* اطمینان از بلاک بودن */
+            margin-left: auto; /* مرکز کردن */
+            margin-right: auto; /* مرکز کردن */
+        }
         header h1 {
-            color: white; /* تغییر رنگ فونت به سفید */
             font-size: 4rem;
+            color: #000;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
             margin: 0;
         }
@@ -51,12 +90,14 @@
             margin-top: 10px;
         }
 
-        nav {
+       nav {
             display: flex;
             justify-content: center;
             background-color: #0056b3;
             padding: 10px 0;
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -66,10 +107,12 @@
             font-size: 1.2rem;
             font-weight: bold;
             display: block;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #004494;
+    
+            transform: translateY(-3px);
         }
 
         /* منوی کشویی */
@@ -102,6 +145,113 @@
             background-color: #004494;
         }
 
+        /* بخش Hero */
+        .hero {
+            text-align: center;
+            background-color: #FFEB3B;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* استایل فرم مشاوره */
+        #consultation-request {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #consultation-request h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* خدمات */
+        .services-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .services-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-box {
+            background-color: #fde378;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-box img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+
+        .service-box h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* فوتر */
         footer {
             background: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/footer.jpg') no-repeat center center;
             background-size: cover;
@@ -150,10 +300,6 @@
             text-decoration: underline;
         }
 
-        footer .contact {
-            text-align: right;
-        }
-
         footer .contact p {
             margin: 10px 0;
             font-size: 18px;
@@ -185,59 +331,111 @@
             padding-top: 15px;
             font-size: 16px;
         }
-
-        .service-box {
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 40px;
-    max-width: 900px; /* محدود کردن عرض کادر به 900px */
-    margin: 20px auto; /* مرکز قرار دادن کادر */
-}
-
-
-        .service-box h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .service-box p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-
-        .service-box ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        .service-box ul li {
-            font-size: 1.1rem;
-        }
-
-        /* اصلاح استایل تصویر */
-        .service-box img {
-            max-width: 400px; /* محدود کردن عرض تصویر به 300px */
-            width: 100%; /* اگر تصویر کوچکتر از 300px بود، از عرض کامل استفاده کند */
-            height: auto; /* حفظ تناسب ابعاد تصویر */
-            margin: 20px auto; /* فاصله‌گذاری از بالا و پایین و مرکز قرار دادن تصویر */
-            display: block; /* مرکز قرار دادن تصویر */
-        }
     </style>
 </head>
 <body>
+    <header style="font-family: 'B Mehr', sans-serif; color: #6c757d;">
+    <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/logo.png" alt="لوگوی موسسه">
+    <p>ارائه خدمات تخصصی مشاوره، نگارش و ویرایش پایان‌نامه و مقاله</p>
+</header>
+<style>
+    header {
+        text-align: center;
+        margin: 40px 0;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
 
-    <header>
-        <h1>خدمات ویرایش و نگارش پایان‌نامه</h1>
-        <p>خدمات ویرایش تخصصی و نگارش استاندارد برای پایان‌نامه و مقالات علمی</p>
-    </header>
+    header p {
+        font-size: 1.25rem;
+    }
+</style>
+<head>
+ <style>
+    /* فونت منو */
+    nav {
+        font-family: 'B Mehr', sans-serif;
+    }
 
-    <nav>
-        <a href="https://paranormalsa.github.io/Mehregan.github.io/">خانه</a>
-        <a href="#about">درباره ما</a>
-        <a href="#services">خدمات</a>
-        <a href="#contact">تماس با ما</a>
-    </nav>
+    /* استایل منوی اصلی */
+    nav {
+        background-color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+        margin: 0 15px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+        padding: 10px;
+        display: inline-block;
+        transition: all 0.3s ease;
+        outline: none;  /* حذف کادر آبی */
+        border: none;   /* حذف کادر و خط زیرین */
+    }
+
+    nav a:hover {
+        transform: scale(1.1);
+        outline: none;  /* حذف کادر آبی */
+        border: none;   /* حذف هرگونه خط مرزی */
+    }
+
+    /* استایل منوی کشویی */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        color: #333;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+</style>
+
+<nav>
+    <a href="https://paranormalsa.github.io/Mehregan.github.io/">صفحه اصلـــی</a>
+    <a href="#about">درباره ما</a>
+    <div class="dropdown">
+        <a href="#">خدمات</a>
+        <div class="dropdown-content">
+            <a href="page1.html" target="_blank">مشاوره پایان‌نامه</a>
+            <a href="page2.html" target="_blank">ویرایش و نگارش</a>
+            <a href="page3.html" target="_blank">تحلیل آماری</a>
+            <a href="page4.html" target="_blank">شبیه‌سازی</a>
+        </div>
+    </div>
+    <a href="#portfolio">اخبار و مقالات</a>
+    <a href="#portfolio">دانلود پرسشنامه</a>
+    <a href="contact.html">تماس با ما</a>
+</nav>
+</body>
+</html>
 
     <section>
         <div class="service-box">
@@ -356,61 +554,9 @@
         background-color: #0056b3;
     }
  </head>
-    </head>
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ثبت درخواست مشاوره پایان‌نامه و مقاله</title>
-    
-    <!-- اضافه کردن فونت B Nazanin از طریق CDN -->
-    <link href="https://cdn.fontcdn.ir/font/BNazanin/BNazanin.css" rel="stylesheet">
-    
-    <style>
-        body {
-            margin: 0;
-            font-family: 'B Nazanin', sans-serif;
-            direction: rtl;
-        }
-
-        /* سایر استایل‌ها */
-        #consultation-request {
-            background-color: #f8f9fa;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        #consultation-request h2 {
-            text-align: center;
-            font-size: 1.8rem;
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-
-        button {
-            width: 100%;
-            padding: 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
 <body>
 <section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
-    <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'B Shiraz', sans-serif;">
         <h2 style="text-align: center;">ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
         <p style="text-align: center;">در صورت نیاز به مشاوره پایان‌نامه و پذیرش مقاله ISI، فرم زیر را تکمیل کنید تا مشاوران ما با شما تماس بگیرند.</p>
         <form action="https://formspree.io/f/mzzzaqdr" method="POST" style="display: grid; gap: 10px;">
@@ -426,8 +572,55 @@
     </div>
 </section>
 
+<!-- اضافه کردن فونت B Shiraz -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=B+Shiraz&display=swap');
+
+    /* اعمال فونت B Shiraz به کل صفحه */
+    body {
+        font-family: 'B Shiraz', sans-serif;
+    }
+</style>
 </body>
 </html>
+
+
+    <!-- اسکریپت JavaScript -->
+    <script>
+        // برای استفاده از EmailJS
+        (function(){
+            emailjs.init("zV7S5e3XDRjM4drBB"); // User ID شما
+        })();
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // جلوگیری از ارسال فرم برای انجام اعتبارسنجی
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+            let formMessage = document.getElementById("formMessage");
+
+            // اعتبارسنجی فرم
+            if (name === "" || email === "" || message === "") {
+                formMessage.textContent = "لطفاً همه فیلدها را پر کنید.";
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                formMessage.textContent = "ایمیل معتبر وارد کنید.";
+            } else {
+                formMessage.textContent = ""; // پیام خطا را پاک می‌کنیم
+                
+                // ارسال ایمیل با استفاده از EmailJS
+                emailjs.sendForm('service_zd4xg3i', 'event_uLrtbYYiSMuhLWlyPSjusc5M', this)
+                    .then(function(response) {
+                        alert("پیام شما با موفقیت ارسال شد!");
+                    }, function(error) {
+                        alert("خطا در ارسال پیام. لطفاً دوباره تلاش کنید.");
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -530,7 +723,7 @@
             <h3>ارتباط با ما</h3>
             <p>تهران، میدان انقلاب، پاساژ اندیشه</p>
             <p>طبقه اول دفتر فنی مهندسی مهرگان</p>
-            <p>تلفن: 021-66487889</p>
+            <p>تلفن: 66487889-021</p>
             <p>موبایل: 09351329909</p>
         </div>
     </div>
@@ -539,6 +732,68 @@
         Copyright © Mehregan Group
     </div>
 </footer>
+
+<style>
+    /* بارگذاری فونت B Nazanin */
+    @font-face {
+        font-family: 'B Nazanin';
+        src: url('https://cdn.fontcdn.ir/fonts/bnazanin/BNazanin.ttf') format('truetype');
+    }
+
+    /* استایل فوتر */
+    footer {
+        background-color: #f8f9fa;
+        padding: 40px 0;
+        font-family: 'B Nazanin', sans-serif;
+        direction: rtl;
+        text-align: right;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .section ul li {
+        margin: 5px 0;
+    }
+
+    .section ul li a {
+        text-decoration: none;
+        color: #555;
+        font-size: 1rem;
+    }
+
+    .section ul li a:hover {
+        color: #007bff;
+    }
+
+    .section.contact p {
+        margin: 5px 0;
+        font-size: 1rem;
+    }
+
+    .copyright {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #e9ecef;
+        font-size: 0.9rem;
+        color: #555;
+    }
+</style>
 
 </body>
 </html>
