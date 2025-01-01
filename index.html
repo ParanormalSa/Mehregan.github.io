@@ -496,74 +496,179 @@ body {
 </nav>
 </body>
 </html>
-<div class="search-container">
-    <div class="search-box">
-        <form role="search" method="get" class="searchform">
-            <input type="text" class="search-input" placeholder="جستجوی محصولات" name="s" aria-label="جستجو" title="جستجو" required>
-            <button type="submit" class="search-button">جستجو</button>
-        </form>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسلاید بار پاییزه</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            direction: rtl;
+        }
+        .slider {
+            width: 900px;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .slides {
+            display: flex;
+            width: 500%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(135deg, #fdfcfb, #f5eded);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .slide img {
+            position: absolute;
+            right: 20px;
+            bottom: 50px;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+        .slide .content {
+            text-align: center;
+            z-index: 2;
+        }
+        .slide .content h1 {
+            font-size: 2.5rem;
+            color: #ff7f50;
+        }
+        .slide .content p {
+            font-size: 1.2rem;
+            color: #444;
+            margin: 10px 0;
+        }
+        .slide .content .button {
+            display: inline-block;
+            background-color: #ff7f50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .slide .content .button:hover {
+            background-color: #e76840;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-size: cover;
+            opacity: 0.2;
+        }
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 3;
+        }
+        .control {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .control:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <div class="background" style="background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/pic/images/1.png');"></div>
+                <div class="content">
+                    <h1>سلام به پاییزی که می‌آید...</h1>
+                    <p>کالکشن پاییزه 1</p>
+                    <a href="#" class="button">مشاهده محصولات</a>
+                </div>
+                <img src="https://via.placeholder.com/200" alt="مدل پاییزه">
+            </div>
+            <div class="slide">
+                <div class="background" style="background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/pic/images/2.jpg');"></div>
+                <div class="content">
+                    <h1>سلام به پاییزی که می‌آید...</h1>
+                    <p>کالکشن پاییزه 2</p>
+                    <a href="#" class="button">مشاهده محصولات</a>
+                </div>
+                <img src="https://via.placeholder.com/200" alt="مدل پاییزه">
+            </div>
+            <div class="slide">
+                <div class="background" style="background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/pic/images/3.jpg');"></div>
+                <div class="content">
+                    <h1>سلام به پاییزی که می‌آید...</h1>
+                    <p>کالکشن پاییزه 3</p>
+                    <a href="#" class="button">مشاهده محصولات</a>
+                </div>
+                <img src="https://via.placeholder.com/200" alt="مدل پاییزه">
+            </div>
+            <div class="slide">
+                <div class="background" style="background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/pic/images/4.jpg');"></div>
+                <div class="content">
+                    <h1>سلام به پاییزی که می‌آید...</h1>
+                    <p>کالکشن پاییزه 4</p>
+                    <a href="#" class="button">مشاهده محصولات</a>
+                </div>
+                <img src="https://via.placeholder.com/200" alt="مدل پاییزه">
+            </div>
+            <div class="slide">
+                <div class="background" style="background-image: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/pic/images/5.jpg');"></div>
+                <div class="content">
+                    <h1>سلام به پاییزی که می‌آید...</h1>
+                    <p>کالکشن پاییزه 5</p>
+                    <a href="#" class="button">مشاهده محصولات</a>
+                </div>
+                <img src="https://via.placeholder.com/200" alt="مدل پاییزه">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="control prev">&#8249;</button>
+            <button class="control next">&#8250;</button>
+        </div>
     </div>
-    <div class="categories">
-        <label for="category-select">انتخاب دسته بندی</label>
-        <select id="category-select" name="category">
-            <option value="0">انتخاب دسته بندی</option>
-            <option value="1">پیراهن مردانه</option>
-            <option value="2">تخفیف ویژه ونوسی</option>
-            <option value="3">تی شرت و پلو شرت مردانه</option>
-            <option value="4">سویشرت و هودی مردانه</option>
-            <option value="5">شلوار مردانه</option>
-        </select>
-    </div>
-</div>
-<style>
-    /* تغییر فونت به B Mehr */
-    @import url('https://fonts.googleapis.com/css2?family=B+Mehr:wght@400;500&display=swap');
-.search-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
+    <script>
+        const slides = document.querySelector('.slides');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        let currentIndex = 0;
 
-.search-box {
-    margin-bottom: 20px;
-}
+        prev.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? 4 : currentIndex - 1;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
 
-.search-input {
-    width: 300px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-button:hover {
-    background-color: #45a049;
-}
-
-.categories {
-    width: 300px;
-}
-
-#category-select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-</style>
+        next.addEventListener('click', () => {
+            currentIndex = (currentIndex === 4) ? 0 : currentIndex + 1;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+    </script>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="fa">
 <head>
