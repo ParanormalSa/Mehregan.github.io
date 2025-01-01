@@ -12,6 +12,8 @@
             <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/twitter.png" alt="Twitter">
         </a>
     </div>
+<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main/styles.css">
 
     <style>
         /* استایل آیکون‌های شبکه اجتماعی */
@@ -510,9 +512,6 @@
             background-color: rgba(0, 0, 0, 0.7);
         }
     </style>
-</head>
-<body>
-
 <div class="slider">
     <div class="slides">
         <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/pic/images/1.png" alt="اسلاید 1">
@@ -526,34 +525,6 @@
     </div>
 </div>
 
-<script>
-    let currentIndex = 0;
-    const slides = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slides img').length;
-
-    function showSlide(index) {
-        if (index >= totalSlides) currentIndex = 0;
-        else if (index < 0) currentIndex = totalSlides - 1;
-        else currentIndex = index;
-
-        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    function nextSlide() {
-        showSlide(currentIndex + 1);
-    }
-
-    function prevSlide() {
-        showSlide(currentIndex - 1);
-    }
-
-    setInterval(() => {
-        nextSlide();
-    }, 4000); // اسلاید خودکار هر ۴ ثانیه
-</script>
-
-</body>
-</html>
 <section class="services-section">
     <h2>درباره ما</h2>
     <div class="services-grid">
