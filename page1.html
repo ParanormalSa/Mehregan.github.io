@@ -452,6 +452,7 @@
             margin: 0;
             font-family: 'B Mehr', sans-serif;
             direction: rtl;
+            background-color: #f4f4f4;
         }
 
         /* استایل‌های دیگر */
@@ -494,6 +495,9 @@
             margin-bottom: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .service-box h3 {
@@ -509,8 +513,11 @@
         }
 
         .service-box img {
+            max-width: 200px; /* حداکثر عرض عکس 200px */
             width: 100%;
-            margin-top: 15px;
+            height: auto;
+            display: block;
+            margin: 15px auto; /* مرکز کردن عکس */
             border-radius: 10px;
         }
     </style>
