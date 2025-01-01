@@ -223,7 +223,6 @@
 
 .service-box {
     background-color: #fff5e6; /* نارنجی خیلی کم‌رنگ */
-    border: 1px solid #ffd9b3; /* رنگ نارنجی کمرنگ‌تر برای مرز */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -243,6 +242,8 @@
   content: '✔'; /* استفاده از نماد تیک */
   color: green; /* رنگ تیک */
   margin-right: 10px; /* فاصله از تیک تا متن */
+  list-style-type: none; /* حذف نقاط لیست */
+  padding-left: 0; /* حذف فاصله سمت چپ */
 }
 
         .service-box ul li {
@@ -259,7 +260,7 @@
            .service-box img {
             display: block; /* برای حذف فضای اضافه اطراف تصویر */
             margin: 15px auto; /* وسط‌چین کردن تصویر */
-            width: 50%; /* تنظیم عرض تصویر نسبت به باکس */
+            width: 150px; /* تنظیم عرض تصویر نسبت به باکس */
             max-width: 200px; /* حداکثر عرض */
             height: auto; /* حفظ تناسب تصویر */
             border-radius: 8px; /* گوشه‌های گرد */
@@ -519,7 +520,7 @@
 
         /* باکس‌های مطالب */
         .service-box {
-            background-color: rgba(138, 43, 226, 0.1); /* بنفش براق کم‌رنگ */
+            background-color: #fff5e6; /* نارنجی خیلی کم‌رنگ */
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
@@ -530,12 +531,14 @@
         }
 
         .service-box h3 {
+            font-family: 'B Mehr', sans-serif; /* استفاده از فونت B Mehr برای متن داخل باکس */
             font-size: 1.6rem;
             color: #000000; /* رنگ عنوان‌ها به مشکی */
             margin-bottom: 10px;
         }
 
         .service-box p {
+            font-family: 'B Mehr', sans-serif; /* استفاده از فونت B Mehr برای متن داخل باکس */
             font-size: 1.2rem;
             line-height: 1.6;
             color: #000000; /* رنگ متن پاراگراف‌ها به مشکی */
@@ -544,7 +547,7 @@
 
         .service-box img {
             max-width: 200px; /* حداکثر عرض عکس 200px */
-            width: 100%;
+            width: 100px;
             height: auto;
             display: block;
             margin: 15px auto; /* مرکز کردن عکس */
