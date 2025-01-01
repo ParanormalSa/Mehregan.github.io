@@ -234,23 +234,28 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
-        .service-box img {
-            width: 60px;
-            margin-bottom: 15px;
+          .service-box img {
+            max-width: 300px; /* حداکثر عرض عکس 200px */
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto; /* مرکز کردن عکس */
+            border-radius: 10px;
         }
 
-        .service-box h3 {
-            font-size: 1.4rem;
-            color: #333;
+     .service-box h3 {
+            font-family: 'B Titr', sans-serif; /* استفاده از فونت B Titr برای تیترها */
+            font-size: 1.6rem;
+            color: #000000; /* رنگ عنوان‌ها به مشکی */
             margin-bottom: 10px;
         }
-
-        .service-box p {
-            font-size: 1rem;
-            color: #555;
+              .service-box p {
+            font-family: 'B Mehr', sans-serif; /* استفاده از فونت B Mehr برای متن داخل باکس */
+            font-size: 1.2rem;
             line-height: 1.6;
+            color: #000000; /* رنگ متن پاراگراف‌ها به مشکی */
+            text-align: justify; /* متن به صورت justify */
         }
-
         /* فوتر */
         footer {
             background: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/footer.jpg') no-repeat center center;
