@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <div class="social-icons">
@@ -13,6 +12,7 @@
             <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/twitter.png" alt="Twitter">
         </a>
     </div>
+
     <style>
         /* استایل آیکون‌های شبکه اجتماعی */
         .social-icons {
@@ -36,7 +36,7 @@
     </style>
 </head>
 </html>
- 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موسسه مشاوره تحصیلی مهرگان</title>
@@ -144,64 +144,7 @@
         .dropdown-content a:hover {
             background-color: #004494;
         }
-          body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        
-        .slider-container {
-            width: 900px;
-            height: 400px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .slider {
-            display: flex;
-            transition: transform 1s ease;
-        }
-        
-        .slide {
-            min-width: 100%;
-            height: 100%;
-            background-color: #ccc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 24px;
-        }
-        
-        /* تغییر رنگ و تنظیم هر اسلاید */
-        .slide:nth-child(odd) {
-            background-color: #4CAF50;
-        }
 
-        .slide:nth-child(even) {
-            background-color: #2196F3;
-        }
-
-        /* انیمیشن اسلاید */
-        @keyframes slideAnimation {
-            0% {
-                transform: translateX(0);
-            }
-            20% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .slider-container {
-            animation: slideAnimation 10s infinite;
-        }
         /* بخش Hero */
         .hero {
             text-align: center;
@@ -391,100 +334,107 @@
     </style>
 </head>
 <body>
-
-    <header>
-        <h1> موسسه علمی و پژوهشی مهرگان</h1>
-        <p>ارائه خدمات تخصصی مشاوره، نگارش و ویرایش پایان‌نامه و مقاله</p>
-    </header>
-
-    <nav>
-        <a href="https://paranormalsa.github.io/Mehregan.github.io/">خانه</a>
-        <a href="#about">درباره ما</a>
-        <div class="dropdown">
-            <a href="#">خدمات</a>
-            <div class="dropdown-content">
-                <a href="page1.html" target="_blank">مشاوره پایان‌نامه</a>
-                <a href="page2.html" target="_blank">ویرایش و نگارش</a>
-                <a href="page3.html" target="_blank">تحلیل آماری</a>
-                <a href="page4.html" target="_blank">شبیه‌سازی</a>
-            </div>
-        </div>
-        <a href="#portfolio">نمونه‌کارها</a>
-        <a href="contact.html">تماس با ما</a>
-    </nav>
-
-    <section class="hero">
-        <h1>به موسسه مهرگان خوش آمدید</h1>
-        <p>با ما در مسیر موفقیت تحصیلی همراه شوید</p>
-    </section>  
+    <header style="font-family: 'B Mehr', sans-serif; color: #6c757d;">
+    <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/logo.png" alt="لوگوی موسسه">
+    <p>ارائه خدمات تخصصی مشاوره، نگارش و ویرایش پایان‌نامه و مقاله</p>
+</header>
+<style>
+    header {
+        text-align: center;
+        margin: 40px 0;
+    }
     
-    <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 1.25rem;
+    }
+</style>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خدمات ما</title>
-    <style>
-        body {
-            font-family: 'B titr', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fffae8;
-            direction: rtl;
-        }
+ <style>
+    /* فونت منو */
+    nav {
+        font-family: 'B Mehr', sans-serif;
+    }
 
-        .services-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+    /* استایل منوی اصلی */
+    nav {
+        background-color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
 
-        .services-section h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: #333;
-        }
+    nav a {
+        margin: 0 15px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+        padding: 10px;
+        display: inline-block;
+        transition: all 0.3s ease;
+        outline: none;  /* حذف کادر آبی */
+        border: none;   /* حذف کادر و خط زیرین */
+    }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+    nav a:hover {
+        transform: scale(1.1);
+        outline: none;  /* حذف کادر آبی */
+        border: none;   /* حذف هرگونه خط مرزی */
+    }
 
-        .service-box {
-            background-color: #fde378;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    /* استایل منوی کشویی */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
-        .service-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 
-        .service-box img {
-            width: 60px;
-            margin-bottom: 15px;
-        }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 
-        .service-box h3 {
-            font-size: 1.4rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        color: #333;
+    }
 
-        .service-box p {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.6;
-        }
-    </style>
-</head>
-<body>
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+</style>
+
+<nav>
+    <a href="https://paranormalsa.github.io/Mehregan.github.io/">صفحه اصلـــی</a>
+    <a href="#about">درباره ما</a>
+    <div class="dropdown">
+        <a href="#">خدمات</a>
+        <div class="dropdown-content">
+            <a href="page1.html" target="_blank">مشاوره پایان‌نامه</a>
+            <a href="page2.html" target="_blank">ویرایش و نگارش</a>
+            <a href="page3.html" target="_blank">تحلیل آماری</a>
+            <a href="page4.html" target="_blank">شبیه‌سازی</a>
+        </div>
+    </div>
+    <a href="#portfolio">اخبار و مقالات</a>
+    <a href="contact.html">تماس با ما</a>
+</nav>
+</body>
+</html>
 
 <section class="services-section">
     <h2>درباره ما</h2>
@@ -522,11 +472,187 @@
     </div>
 </section>
 
+<style>
+    /* تغییر فونت به B Mehr */
+    @import url('https://fonts.googleapis.com/css2?family=B+Mehr:wght@400;500&display=swap');
+
+    .services-section {
+        font-family: 'B Mehr', sans-serif;
+        color: #333; /* رنگ متن */
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .services-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        font-weight: 500;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* سه ستون */
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .service-box {
+        background-color: #ffea91; /* رنگ جدید برای باکس‌ها */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-box img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .service-box h3 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    .service-box p {
+        font-size: 1rem;
+        color: #555;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>همراه شما در مسیر پژوهش</title>
+    <style>
+        @font-face {
+            font-family: 'B Mehr';
+            src: url('https://cdn.fontcdn.ir/BMehr/BMehr.ttf') format('truetype');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'B Mehr', Arial, sans-serif;
+            direction: rtl;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 400px; /* ارتفاع مناسب */
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slideAnimation 12s infinite;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slideAnimation {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(0); }
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            font-family: 'B Mehr', Arial, sans-serif;
+        }
+
+        .controls button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider">
+    <div class="slides">
+        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/image/1.png" alt="اسلاید 1">
+        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/image/2.jpg" alt="اسلاید 2">
+        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/image/3.jpg" alt="اسلاید 3">
+        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/image/4.jpg" alt="اسلاید 4">
+    </div>
+    <div class="controls">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+    </div>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slides img').length;
+
+    function showSlide(index) {
+        if (index >= totalSlides) currentIndex = 0;
+        else if (index < 0) currentIndex = totalSlides - 1;
+        else currentIndex = index;
+
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    setInterval(() => {
+        nextSlide();
+    }, 4000); // اسلاید خودکار هر ۴ ثانیه
+</script>
+
 </body>
 </html>
 
 <section id="services">
-    <h2>خدمات ما</h2>
+    <div class="service-title">
+        <h2>خدمات ما</h2>
+    </div>
     <div class="services">
         <div class="service">
             <h3><a href="page1.html" target="_blank">مشاوره پایان‌نامه</a></h3>
@@ -548,6 +674,25 @@
 </section>
 
 <style>
+    /* بارگذاری فونت B Mehr */
+    @font-face {
+        font-family: 'B Mehr';
+        src: url('https://fonts.googleapis.com/css2?family=B+Mehr&display=swap');
+    }
+
+    /* استایل عنوان خدمات ما */
+    .service-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .service-title h2 {
+        font-family: 'B Mehr', sans-serif;
+        font-size: 2.5rem;
+        color: #333;
+        margin: 0;
+    }
+
     /* تنظیمات گرید */
     .services {
         display: grid;
@@ -561,7 +706,7 @@
     }
 
     .service {
-        background-color: #f8f9fa;
+        background-color: #5d9aeb; /* رنگ جدید باکس‌ها */
         padding: 25px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -569,6 +714,8 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         width: 100%; /* عرض باکس به صورت 100% از فضای در دسترس */
         max-width: 450px; /* حداکثر عرض باکس‌ها */
+        color: white; /* رنگ متن داخل باکس سفید */
+        font-family: 'B Mehr', sans-serif; /* فونت داخل باکس‌ها */
     }
 
     .service:hover {
@@ -583,76 +730,24 @@
 
     .service p {
         font-size: 1rem;
-        color: #555;
+        color: white; /* رنگ متن داخل باکس‌ها سفید */
     }
 
     /* استایل لینک‌ها */
     .service a {
         text-decoration: none;
-        color: #007bff;
+        color: white; /* رنگ لینک‌ها سفید */
         font-weight: bold;
     }
 
     .service a:hover {
-        color: #0056b3;
+        color: #f1f1f1; /* رنگ لینک‌ها در حالت hover */
     }
 </style>
 
-    </head>
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ثبت درخواست مشاوره پایان‌نامه و مقاله</title>
-    
-    <!-- اضافه کردن فونت B Nazanin از طریق CDN -->
-    <link href="https://cdn.fontcdn.ir/font/BNazanin/BNazanin.css" rel="stylesheet">
-    
-    <style>
-        body {
-            margin: 0;
-            font-family: 'B Nazanin', sans-serif;
-            direction: rtl;
-        }
-
-        /* سایر استایل‌ها */
-        #consultation-request {
-            background-color: #f8f9fa;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        #consultation-request h2 {
-            text-align: center;
-            font-size: 1.8rem;
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-
-        button {
-            width: 100%;
-            padding: 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
 <body>
 <section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
-    <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'B Shiraz', sans-serif;">
         <h2 style="text-align: center;">ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
         <p style="text-align: center;">در صورت نیاز به مشاوره پایان‌نامه و پذیرش مقاله ISI، فرم زیر را تکمیل کنید تا مشاوران ما با شما تماس بگیرند.</p>
         <form action="https://formspree.io/f/mzzzaqdr" method="POST" style="display: grid; gap: 10px;">
@@ -668,6 +763,15 @@
     </div>
 </section>
 
+<!-- اضافه کردن فونت B Shiraz -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=B+Shiraz&display=swap');
+
+    /* اعمال فونت B Shiraz به کل صفحه */
+    body {
+        font-family: 'B Shiraz', sans-serif;
+    }
+</style>
 </body>
 </html>
 
@@ -810,7 +914,7 @@
             <h3>ارتباط با ما</h3>
             <p>تهران، میدان انقلاب، پاساژ اندیشه</p>
             <p>طبقه اول دفتر فنی مهندسی مهرگان</p>
-            <p>تلفن: 021-66487889</p>
+            <p>تلفن: 66487889-021</p>
             <p>موبایل: 09351329909</p>
         </div>
     </div>
@@ -819,6 +923,68 @@
         Copyright © Mehregan Group
     </div>
 </footer>
+
+<style>
+    /* بارگذاری فونت B Nazanin */
+    @font-face {
+        font-family: 'B Nazanin';
+        src: url('https://cdn.fontcdn.ir/fonts/bnazanin/BNazanin.ttf') format('truetype');
+    }
+
+    /* استایل فوتر */
+    footer {
+        background-color: #f8f9fa;
+        padding: 40px 0;
+        font-family: 'B Nazanin', sans-serif;
+        direction: rtl;
+        text-align: right;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .section ul li {
+        margin: 5px 0;
+    }
+
+    .section ul li a {
+        text-decoration: none;
+        color: #555;
+        font-size: 1rem;
+    }
+
+    .section ul li a:hover {
+        color: #007bff;
+    }
+
+    .section.contact p {
+        margin: 5px 0;
+        font-size: 1rem;
+    }
+
+    .copyright {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #e9ecef;
+        font-size: 0.9rem;
+        color: #555;
+    }
+</style>
 
 </body>
 </html>
