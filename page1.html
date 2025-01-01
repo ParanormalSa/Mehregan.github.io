@@ -231,6 +231,17 @@
     margin-left: auto;
     margin-right: auto;
 }
+        }
+        .service-box ul {
+  list-style-type: none; /* حذف نقاط لیست */
+  padding-left: 0; /* حذف فاصله سمت چپ */
+}
+
+.service-box ul li::before {
+  content: '✔'; /* استفاده از نماد تیک */
+  color: green; /* رنگ تیک */
+  margin-right: 10px; /* فاصله از تیک تا متن */
+}
 
         .service-box ul li {
     font-family: 'B Mehr', sans-serif; /* فونت دلخواه شما */
