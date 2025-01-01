@@ -250,6 +250,47 @@
             color: #555;
             line-height: 1.6;
         }
+<head>
+    <style>
+        @font-face {
+            font-family: 'B Mehr';
+            src: url('https://cdn.fontcdn.ir/BMehr/BMehr.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'B Mehr', Arial, sans-serif;
+            direction: rtl;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slideAnimation 12s infinite;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slideAnimation {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
 
         /* فوتر */
         footer {
@@ -435,99 +476,6 @@
 </nav>
 </body>
 </html>
-
-<section class="services-section">
-    <h2>درباره ما</h2>
-    <div class="services-grid">
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon1.png" alt="مشاوره">
-            <h3>مشاوره رایگان پایان‌نامه و مقالات شما</h3>
-            <p>ارائه مشاوره تخصصی برای انتخاب موضوع و راهنمایی جهت آغاز پژوهش شما.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon2.png" alt="ارتباط مستقیم">
-            <h3>ارتباط مستقیم با اساتید رشته خود</h3>
-            <p>بدون واسطه و همراهی شبانه‌روزی در تمامی مراحل پژوهش.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon3.png" alt="فصل به فصل">
-            <h3>ارسال فصل به فصل و همفکری</h3>
-            <p>ارسال دقیق و شفاف فصل‌ها همراه با نظرات مشورتی و پژوهشی.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon4.png" alt="صرفه جویی">
-            <h3>صرفه‌جویی در زمان و هزینه‌های شما</h3>
-            <p>صرفه‌جویی کامل در تمامی هزینه‌ها و کاهش زمان پیشرفت پروژه‌ها.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon5.png" alt="آموزش">
-            <h3>آموزش کامل حضوری جهت آمادگی دفاع</h3>
-            <p>آموزش صفر تا صد تکنیک‌های دفاع به صورت حضوری توسط مشاوران ما.</p>
-        </div>
-        <div class="service-box">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon6.png" alt="پشتیبانی">
-            <h3>پشتیبانی 24 ساعته</h3>
-            <p>پاسخگویی به سوالات، اصلاحات و رفع اشکالات شما در سریع‌ترین زمان ممکن.</p>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* تغییر فونت به B Mehr */
-    @import url('https://fonts.googleapis.com/css2?family=B+Mehr:wght@400;500&display=swap');
-
-    .services-section {
-        font-family: 'B Mehr', sans-serif;
-        color: #333; /* رنگ متن */
-        padding: 50px 20px;
-        text-align: center;
-    }
-
-    .services-section h2 {
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        font-weight: 500;
-    }
-
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* سه ستون */
-        gap: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .service-box {
-        background-color: #ffea91; /* رنگ جدید برای باکس‌ها */
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .service-box img {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 20px;
-    }
-
-    .service-box h3 {
-        font-size: 1.25rem;
-        margin-bottom: 10px;
-        font-weight: 500;
-    }
-
-    .service-box p {
-        font-size: 1rem;
-        color: #555;
-    }
-</style>
 <!DOCTYPE html>
 <html lang="fa">
 <head>
@@ -648,6 +596,98 @@
 
 </body>
 </html>
+<section class="services-section">
+    <h2>درباره ما</h2>
+    <div class="services-grid">
+        <div class="service-box">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon1.png" alt="مشاوره">
+            <h3>مشاوره رایگان پایان‌نامه و مقالات شما</h3>
+            <p>ارائه مشاوره تخصصی برای انتخاب موضوع و راهنمایی جهت آغاز پژوهش شما.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon2.png" alt="ارتباط مستقیم">
+            <h3>ارتباط مستقیم با اساتید رشته خود</h3>
+            <p>بدون واسطه و همراهی شبانه‌روزی در تمامی مراحل پژوهش.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon3.png" alt="فصل به فصل">
+            <h3>ارسال فصل به فصل و همفکری</h3>
+            <p>ارسال دقیق و شفاف فصل‌ها همراه با نظرات مشورتی و پژوهشی.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon4.png" alt="صرفه جویی">
+            <h3>صرفه‌جویی در زمان و هزینه‌های شما</h3>
+            <p>صرفه‌جویی کامل در تمامی هزینه‌ها و کاهش زمان پیشرفت پروژه‌ها.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon5.png" alt="آموزش">
+            <h3>آموزش کامل حضوری جهت آمادگی دفاع</h3>
+            <p>آموزش صفر تا صد تکنیک‌های دفاع به صورت حضوری توسط مشاوران ما.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/icon6.png" alt="پشتیبانی">
+            <h3>پشتیبانی 24 ساعته</h3>
+            <p>پاسخگویی به سوالات، اصلاحات و رفع اشکالات شما در سریع‌ترین زمان ممکن.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* تغییر فونت به B Mehr */
+    @import url('https://fonts.googleapis.com/css2?family=B+Mehr:wght@400;500&display=swap');
+
+    .services-section {
+        font-family: 'B Mehr', sans-serif;
+        color: #333; /* رنگ متن */
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .services-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        font-weight: 500;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* سه ستون */
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .service-box {
+        background-color: #ffea91; /* رنگ جدید برای باکس‌ها */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-box img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .service-box h3 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    .service-box p {
+        font-size: 1rem;
+        color: #555;
+    }
+</style>
 
 <section id="services">
     <div class="service-title">
