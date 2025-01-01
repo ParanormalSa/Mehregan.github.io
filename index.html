@@ -1,6 +1,42 @@
 <!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+    <div class="social-icons">
+        <a href="https://instagram.com/mehreganresearch" target="_blank" aria-label="Instagram">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://t.me/mehregangroup32" target="_blank" aria-label="Telegram">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/telegram.png" alt="Telegram">
+        </a>
+        <a href="https://twitter.com/yourpage" target="_blank" aria-label="Twitter">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/twitter.png" alt="Twitter">
+        </a>
+    </div>
+    <style>
+        /* استایل آیکون‌های شبکه اجتماعی */
+        .social-icons {
+            position: fixed;
+            top: 10px; /* فاصله از بالای صفحه */
+            left: 20px; /* تغییر فاصله از سمت چپ (1 سانتی‌متر) */
+            display: flex;
+            gap: 10px; /* فاصله بین آیکون‌ها */
+            z-index: 1000; /* اطمینان از اینکه همیشه بالای سایر المان‌ها است */
+        }
+
+        .social-icons a img {
+            width: 25px; /* اندازه کوچکتر آیکون‌ها */
+            height: 25px; /* اندازه کوچکتر آیکون‌ها */
+            transition: transform 0.3s ease; /* افکت هنگام هاور */
+        }
+
+        .social-icons a img:hover {
+            transform: scale(1.2); /* بزرگتر شدن آیکون هنگام هاور */
+        }
+    </style>
+</head>
+</html>
+ 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موسسه مشاوره تحصیلی مهرگان</title>
@@ -29,7 +65,14 @@
             position: relative;
             margin-bottom: 50px;
         }
-
+   header img {
+            width: 400px; /* تنظیم عرض لوگو */
+            height: auto; /* حفظ تناسب ابعاد */
+            margin-bottom: 10px; /* فاصله از متن */
+            display: block; /* اطمینان از بلاک بودن */
+            margin-left: auto; /* مرکز کردن */
+            margin-right: auto; /* مرکز کردن */
+        }
         header h1 {
             font-size: 4rem;
             color: #000;
@@ -47,13 +90,14 @@
             margin-top: 10px;
         }
 
-        /* منوی اصلی */
-        nav {
+       nav {
             display: flex;
             justify-content: center;
             background-color: #0056b3;
             padding: 10px 0;
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -63,10 +107,12 @@
             font-size: 1.2rem;
             font-weight: bold;
             display: block;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #004494;
+    
+            transform: translateY(-3px);
         }
 
         /* منوی کشویی */
@@ -98,7 +144,64 @@
         .dropdown-content a:hover {
             background-color: #004494;
         }
+          body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .slider-container {
+            width: 900px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .slider {
+            display: flex;
+            transition: transform 1s ease;
+        }
+        
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        /* تغییر رنگ و تنظیم هر اسلاید */
+        .slide:nth-child(odd) {
+            background-color: #4CAF50;
+        }
 
+        .slide:nth-child(even) {
+            background-color: #2196F3;
+        }
+
+        /* انیمیشن اسلاید */
+        @keyframes slideAnimation {
+            0% {
+                transform: translateX(0);
+            }
+            20% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .slider-container {
+            animation: slideAnimation 10s infinite;
+        }
         /* بخش Hero */
         .hero {
             text-align: center;
