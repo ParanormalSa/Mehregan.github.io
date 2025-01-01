@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اخبار و مقالات</title>
+    <link href="https://cdn.fontcdn.ir/font/BMehr/BMehr.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'B Mehr', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .post {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .post:last-child {
+            border-bottom: none;
+        }
+
+        .post h2 {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+
+        .post p {
+            color: #555;
+            text-align: justify;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .pagination a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .pagination .active {
+            background-color: #007bff;
+            color: #fff;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>اخبار و مقالات</h1>
+
+        <!-- پست‌ها -->
+        <div class="post">
+            <h2>عنوان پست اول</h2>
+            <p>این یک متن نمونه است که می‌تواند خلاصه‌ای از مقاله یا خبر باشد. برای دیدن ادامه متن به صفحه مربوطه مراجعه کنید.</p>
+        </div>
+        <div class="post">
+            <h2>عنوان پست دوم</h2>
+            <p>این یک متن نمونه است که می‌تواند خلاصه‌ای از مقاله یا خبر باشد. برای دیدن ادامه متن به صفحه مربوطه مراجعه کنید.</p>
+        </div>
+        <!-- ادامه پست‌ها -->
+
+        <!-- صفحه‌بندی -->
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+        </div>
+    </div>
+</body>
+</html>
