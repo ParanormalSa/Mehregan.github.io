@@ -334,12 +334,10 @@
     </style>
 </head>
 <body>
-
     <header style="font-family: 'B Mehr', sans-serif; color: #6c757d;">
     <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/logo.png" alt="لوگوی موسسه">
     <p>ارائه خدمات تخصصی مشاوره، نگارش و ویرایش پایان‌نامه و مقاله</p>
 </header>
-
 <style>
     header {
         text-align: center;
@@ -355,7 +353,6 @@
         font-size: 1.25rem;
     }
 </style>
-
 <head>
  <style>
     /* فونت منو */
@@ -531,6 +528,127 @@
         color: #555;
     }
 </style>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>همراه شما در مسیر پژوهش</title>
+    <style>
+        @font-face {
+            font-family: 'B Mehr';
+            src: url('BMehr.ttf'); /* فایل فونت را در مسیر مناسب قرار دهید */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'B Mehr', Arial, sans-serif;
+            direction: rtl;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slideAnimation 12s infinite;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slideAnimation {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(0); }
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            font-family: 'B Mehr', Arial, sans-serif;
+        }
+
+        .controls button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider">
+    <div class="slides">
+        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/image/1.png" alt="اسلاید 1">
+        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/image/2.jpg" alt="اسلاید 2">
+        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/image/3.jpg" alt="اسلاید 3">
+        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/image/4.jpg" alt="اسلاید 4">
+    </div>
+    <div class="controls">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+    </div>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slides img').length;
+
+    function showSlide(index) {
+        if (index >= totalSlides) currentIndex = 0;
+        else if (index < 0) currentIndex = totalSlides - 1;
+        else currentIndex = index;
+
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    setInterval(() => {
+        nextSlide();
+    }, 4000); // اسلاید خودکار هر ۴ ثانیه
+</script>
+
+</body>
+</html>
+
 <section id="services">
     <div class="service-title">
         <h2>خدمات ما</h2>
