@@ -169,6 +169,21 @@
    /* فوتر */
        /* فوتر */
         footer {
+    margin: 0; /* حذف هرگونه فاصله خارجی */
+    padding: 0; /* حذف هرگونه پدینگ داخلی */
+}
+
+footer .container {
+    width: 100%; /* اطمینان از اینکه محتوای داخل فوتر به طور کامل عرض را پوشش دهد */
+}
+
+footer .copyright {
+    background-color: transparent; /* جلوگیری از داشتن پس‌زمینه سفید */
+    color: white; /* رنگ متن سفید */
+    text-align: center;
+    padding: 10px;
+}
+        footer {
             background: url('https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/footer.jpg') no-repeat center center;
             background-size: cover;
             color: #fff;
