@@ -143,64 +143,7 @@
         .dropdown-content a:hover {
             background-color: #004494;
         }
-          body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
         
-        .slider-container {
-            width: 900px;
-            height: 400px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .slider {
-            display: flex;
-            transition: transform 1s ease;
-        }
-        
-        .slide {
-            min-width: 100%;
-            height: 100%;
-            background-color: #ccc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 24px;
-        }
-        
-        /* تغییر رنگ و تنظیم هر اسلاید */
-        .slide:nth-child(odd) {
-            background-color: #4CAF50;
-        }
-
-        .slide:nth-child(even) {
-            background-color: #2196F3;
-        }
-
-        /* انیمیشن اسلاید */
-        @keyframes slideAnimation {
-            0% {
-                transform: translateX(0);
-            }
-            20% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .slider-container {
-            animation: slideAnimation 10s infinite;
-        }
         /* بخش Hero */
         .hero {
             text-align: center;
