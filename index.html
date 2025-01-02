@@ -705,6 +705,10 @@ footer {
 </style>
 
 <body>
+    <div class="service-title">
+        <h2>ثبت درخواست مشاوره</h2>
+        <p>برای دریافت مشاوره رایگان، لطفاً درخواست خود را از طریق قسمت زیر ثبت نمایید. پژوهشگران ما در اولین فرصت با شما تماس خواهند گرفت.</p>
+    </div>
 <section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
     <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'B Shiraz', sans-serif;">
         <h2 style="text-align: center;">ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
@@ -725,7 +729,24 @@ footer {
 <!-- اضافه کردن فونت B Shiraz -->
 <style>
     @import url('https://fonts.googleapis.com/css2?family=B+Shiraz&display=swap');
+    /* بارگذاری فونت B Mehr */
+    @font-face {
+        font-family: 'B Mehr';
+        src: url('https://fonts.googleapis.com/css2?family=B+Mehr&display=swap');
+    }
 
+    /* استایل عنوان خدمات ما */
+    .service-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .service-title h2 {
+        font-family: 'B Mehr', sans-serif;
+        font-size: 2.5rem;
+        color: #333;
+        margin: 0;
+    }
     /* اعمال فونت B Shiraz به کل صفحه */
     body {
         font-family: 'B Shiraz', sans-serif;
