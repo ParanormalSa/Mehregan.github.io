@@ -492,6 +492,80 @@ body {
 </nav>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسلایدر سایت مهرگان</title>
+    <!-- لینک به فایل‌های CSS -->
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+    <style>
+        body {
+            font-family: 'B Mehr', Arial, sans-serif;
+            direction: rtl;
+        }
+
+        .slider-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .owl-carousel img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="owl-carousel owl-theme">
+            <div>
+                <a href="https://example.com/1">
+                    <img src="https://www.cdkeyshare.ir/wp-content/uploads/2024/07/banner-share30.jpg" alt="بنر ۱">
+                </a>
+            </div>
+            <div>
+                <a href="https://example.com/2">
+                    <img src="https://www.cdkeyshare.ir/wp-content/uploads/2023/10/banner-xbox-new.jpg" alt="بنر ۲">
+                </a>
+            </div>
+            <div>
+                <a href="https://example.com/3">
+                    <img src="https://www.cdkeyshare.ir/wp-content/uploads/2022/06/banner-plus-002.jpg" alt="بنر ۳">
+                </a>
+            </div>
+            <div>
+                <a href="https://example.com/4">
+                    <img src="https://www.cdkeyshare.ir/wp-content/uploads/2023/10/banner-ps5-new.jpg" alt="بنر ۴">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- لینک به فایل‌های جاوااسکریپت -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                rtl: true,
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: { items: 1 },
+                    600: { items: 2 },
+                    1000: { items: 3 }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
 
 <section class="services-section">
     <section id="why-mehregan">
