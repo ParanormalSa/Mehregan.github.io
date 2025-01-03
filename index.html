@@ -795,7 +795,7 @@ body {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تماس با ما</title>
     <style>
-        body { font-family: Arial, sans-serif; }
+        body { font-family: 'B Mehr', sans-serif; }
         .contact-button {
             position: fixed;
             bottom: 10px;
@@ -848,22 +848,32 @@ body {
             border: 1px solid #ccc;
             border-radius: 4px;
             width: 100%;
+            font-family: 'B Mehr', sans-serif;
         }
         .consultation-form button {
             background-color: #0066cc;
             color: white;
             cursor: pointer;
         }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9;
+        }
     </style>
 </head>
 <body>
 
 <div class="contact-button" onclick="toggleMenu()">تماس با ما</div>
-
 <div class="contact-menu">
     <a href="#" onclick="toggleForm()">درخواست مشاوره رایگان</a>
-    <a href="https://wa.me/+989351329909">واتس اپ</a>
-    <a href="https://t.me/mehregangroup32">تلگرام</a>
+    <a href="https://wa.me/+989351329909" target="_blank">واتس اپ</a>
+    <a href="https://t.me/mehregangroup32" target="_blank">تلگرام</a>
 </div>
 
 <div id="consultationForm" class="consultation-form">
@@ -877,6 +887,8 @@ body {
     </form>
 </div>
 
+<div class="overlay" onclick="closeForm()"></div>
+
 <script>
     function toggleMenu() {
         document.querySelector('.contact-button').classList.toggle('active');
@@ -884,6 +896,12 @@ body {
 
     function toggleForm() {
         document.getElementById('consultationForm').style.display = 'block';
+        document.querySelector('.overlay').style.display = 'block';
+    }
+
+    function closeForm() {
+        document.getElementById('consultationForm').style.display = 'none';
+        document.querySelector('.overlay').style.display = 'none';
     }
 </script>
 
