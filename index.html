@@ -832,8 +832,16 @@ body {
             display: block;
         }
         .consultation-form {
-            display: grid;
-            gap: 10px;
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            right: 280px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            z-index: 10;
         }
         .consultation-form input, .consultation-form textarea, .consultation-form button {
             padding: 10px;
@@ -853,22 +861,20 @@ body {
 <div class="contact-button" onclick="toggleMenu()">تماس با ما</div>
 
 <div class="contact-menu">
-    <a href="#" onclick="showForm()">درخواست مشاوره رایگان</a>
-    <a href="https://wa.me/yourwhatsappnumber">واتس اپ</a>
-    <a href="https://t.me/yourtelegram">تلگرام</a>
+    <a href="#" onclick="toggleForm()">درخواست مشاوره رایگان</a>
+    <a href="https://wa.me/+989351329909">واتس اپ</a>
+    <a href="https://t.me/mehregangroup32">تلگرام</a>
 </div>
 
-<div id="consultationForm" style="display: none;">
-    <div style="padding: 20px; background-color: #f9f9f9; border-radius: 8px; max-width: 600px; margin: auto;">
-        <h2>ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
-        <form action="https://formspree.io/f/mzzzaqdr" method="POST" class="consultation-form">
-            <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
-            <input type="text" name="phone" placeholder="شماره تماس" required>
-            <input type="text" name="field" placeholder="رشته و گرایش" required>
-            <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" required></textarea>
-            <button type="submit">ارسال</button>
-        </form>
-    </div>
+<div id="consultationForm" class="consultation-form">
+    <h3>درخواست مشاوره رایگان</h3>
+    <form action="https://formspree.io/f/mzzzaqdr" method="POST">
+        <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
+        <input type="text" name="phone" placeholder="شماره تماس" required>
+        <input type="text" name="field" placeholder="رشته و گرایش" required>
+        <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" required></textarea>
+        <button type="submit">ارسال</button>
+    </form>
 </div>
 
 <script>
@@ -876,7 +882,7 @@ body {
         document.querySelector('.contact-button').classList.toggle('active');
     }
 
-    function showForm() {
+    function toggleForm() {
         document.getElementById('consultationForm').style.display = 'block';
     }
 </script>
