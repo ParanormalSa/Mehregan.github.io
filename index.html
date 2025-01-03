@@ -623,156 +623,96 @@ body {
     </div>
 </section>
 
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ثبت درخواست مشاوره</title>
-    <style>
-        <section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px; margin-top: 3cm;">
-    <!-- باقی کد فرم -->
 
-        /* بارگذاری فونت B Mehr */
-        @import url('https://fonts.googleapis.com/css2?family=B+Mehr&display=swap');
+<style>
+    /* بارگذاری فونت B Mehr */
+    @font-face {
+        font-family: 'B Mehr';
+        src: url('https://fonts.googleapis.com/css2?family=B+Mehr&display=swap');
+    }
 
-        /* اعمال فونت B Mehr به تمام صفحات */
-        body, h2, h3, p, input, button, textarea {
-            font-family: 'B Mehr', sans-serif;
-        }
+    /* استایل عنوان خدمات ما */
+    .service-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
 
-        /* استایل عنوان خدمات ما */
-        .service-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    .service-title h2 {
+        font-family: 'B Mehr', sans-serif;
+        font-size: 2.5rem;
+        color: #333;
+        margin: 0;
+    }
 
-        .service-title h2 {
-            font-family: 'B Mehr', sans-serif;
-            font-size: 2.5rem;
-            color: #333;
-            margin: 0;
-        }
+    /* تنظیمات گرید */
+    .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* دو ستون */
+        gap: 20px;
+        margin-top: 20px;
+        justify-items: center; /* مرکز کردن باکس‌ها */
+        max-width: 1200px; /* حداکثر عرض گرید */
+        margin-left: auto;
+        margin-right: auto; /* مرکز کردن کل گرید در صفحه */
+    }
 
-        /* استایل فرم */
-        section#consultation-request {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+    .service {
+        background-color: #5d9aeb; /* رنگ جدید باکس‌ها */
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 100%; /* عرض باکس به صورت 100% از فضای در دسترس */
+        max-width: 450px; /* حداکثر عرض باکس‌ها */
+        color: white; /* رنگ متن داخل باکس سفید */
+        font-family: 'B Mehr', sans-serif; /* فونت داخل باکس‌ها */
+    }
 
-        .form-container {
-            flex: 1;
-            max-width: 600px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+    .service:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
 
-        .form-container h2 {
-            text-align: center;
-        }
+    .service h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
 
-        .form-container input, .form-container textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 100%;
-            margin-bottom: 10px;
-            font-family: 'B Mehr', sans-serif;
-        }
+    .service p {
+        font-size: 1rem;
+        color: white; /* رنگ متن داخل باکس‌ها سفید */
+    }
 
-        .form-container button {
-            padding: 10px;
-            background-color: #0066cc;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: 'B Mehr', sans-serif;
-        }
+    /* استایل لینک‌ها */
+    .service a {
+        text-decoration: none;
+        color: white; /* رنگ لینک‌ها سفید */
+        font-weight: bold;
+    }
 
-        /* استایل تصویر */
-        .form-image {
-            flex: 1;
-            max-width: 600px;
-            text-align: center;
-            padding: 20px;
-        }
+    .service a:hover {
+        color: #f1f1f1; /* رنگ لینک‌ها در حالت hover */
+    }
+            #services {
+        margin-bottom: 3cm; /* فاصله 3 سانتی‌متر */
+    }
+</style>
 
-        .form-image img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        /* استایل لینک‌ها */
-        .service a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-
-        .service a:hover {
-            color: #f1f1f1;
-        }
-
-        /* تنظیمات گرید */
-        .services {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 20px;
-            justify-items: center;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .service {
-            background-color: #5d9aeb;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 100%;
-            max-width: 450px;
-            color: white;
-        }
-
-        .service:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .service h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        .service p {
-            font-size: 1rem;
-        }
-    </style>
-</head>
 <body>
     <div class="service-title">
         <h2>ثبت درخواست مشاوره</h2>
         <p>برای دریافت مشاوره رایگان، لطفاً درخواست خود را از طریق قسمت زیر ثبت نمایید. پژوهشگران ما در اولین فرصت با شما تماس خواهند گرفت.</p>
     </div>
-    <section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
-        <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'B Mehr', sans-serif;">
-            <h2 style="text-align: center;">ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
-            <p style="text-align: center;">در صورت نیاز به مشاوره پایان‌نامه و پذیرش مقاله ISI، فرم زیر را تکمیل کنید تا مشاوران ما با شما تماس بگیرند.</p>
-            <form action="https://formspree.io/f/mzzzaqdr" method="POST" style="display: grid; gap: 10px;">
-                <input type="text" name="name" placeholder="نام و نام خانوادگی" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                <input type="text" name="phone" placeholder="شماره تماس" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                <input type="text" name="field" placeholder="رشته و گرایش" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                
-                <!-- فیلد کشویی -->
-                <select name="type" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+<section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
+    <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'B Shiraz', sans-serif;">
+        <h2 style="text-align: center;">ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
+        <p style="text-align: center;">در صورت نیاز به مشاوره پایان‌نامه و پذیرش مقاله ISI، فرم زیر را تکمیل کنید تا مشاوران ما با شما تماس بگیرند.</p>
+        <form action="https://formspree.io/f/mzzzaqdr" method="POST" style="display: grid; gap: 10px;">
+            <input type="text" name="name" placeholder="نام و نام خانوادگی" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" name="phone" placeholder="شماره تماس" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" name="field" placeholder="رشته و گرایش" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <select name="type" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                     <option value="">انتخاب نوع</option>
                     <option value="پروپوزال">پروپوزال</option>
                     <option value="پایان نامه">پایان نامه</option>
@@ -780,24 +720,80 @@ body {
                     <option value="مقاله">مقاله</option>
                     <option value="کار کلاسی">کار کلاسی</option>
                 </select>
-                
-                <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required></textarea>
-                <button type="submit" style="padding: 10px; background-color: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer;">ارسال</button>
-            </form>
-        </div>
-        <div style="flex: 1; max-width: 600px; text-align: center; padding: 20px;">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/book.jpg" alt="مشاوره پایان‌نامه" style="max-width: 100%; border-radius: 8px;">
-        </div>
-    </section>
-</body>
+            <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required></textarea>
+            <button type="submit" style="padding: 10px; background-color: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer;">ارسال</button>
+        </form>
+    </div>
+    <div style="flex: 1; max-width: 600px; text-align: center; padding: 20px;">
+        <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/book.jpg" alt="مشاوره پایان‌نامه" style="max-width: 100%; border-radius: 8px;">
+    </div>
+</section>
 
+<!-- اضافه کردن فونت B Shiraz -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=B+Shiraz&display=swap');
+    /* بارگذاری فونت B Mehr */
+    @font-face {
+        font-family: 'B Mehr';
+        src: url('https://fonts.googleapis.com/css2?family=B+Mehr&display=swap');
+    }
+
+    /* استایل عنوان خدمات ما */
+    .service-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .service-title h2 {
+        font-family: 'B Mehr', sans-serif;
+        font-size: 2.5rem;
+        color: #333;
+        margin: 0;
+    }
+    /* اعمال فونت B Shiraz به کل صفحه */
+    body {
+        font-family: 'B Shiraz', sans-serif;
+    }
+            #why-mehregan {
+        margin-bottom: 3cm; /* فاصله 3 سانتی‌متر */
+    }
+</style>
+</body>
+</html>
+
+
+    <!-- اسکریپت JavaScript -->
     <script>
-        // اضافه کردن اسکریپت بسته شدن منو تماس با کلیک خارج از فرم
-        window.onclick = function(event) {
-            if (!event.target.matches('.contact-menu, .contact-menu *')) {
-                document.getElementById("consultation-request").style.display = "none";
+        // برای استفاده از EmailJS
+        (function(){
+            emailjs.init("zV7S5e3XDRjM4drBB"); // User ID شما
+        })();
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // جلوگیری از ارسال فرم برای انجام اعتبارسنجی
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+            let formMessage = document.getElementById("formMessage");
+
+            // اعتبارسنجی فرم
+            if (name === "" || email === "" || message === "") {
+                formMessage.textContent = "لطفاً همه فیلدها را پر کنید.";
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                formMessage.textContent = "ایمیل معتبر وارد کنید.";
+            } else {
+                formMessage.textContent = ""; // پیام خطا را پاک می‌کنیم
+                
+                // ارسال ایمیل با استفاده از EmailJS
+                emailjs.sendForm('service_zd4xg3i', 'event_uLrtbYYiSMuhLWlyPSjusc5M', this)
+                    .then(function(response) {
+                        alert("پیام شما با موفقیت ارسال شد!");
+                    }, function(error) {
+                        alert("خطا در ارسال پیام. لطفاً دوباره تلاش کنید.");
+                    });
             }
-        }
+        });
     </script>
 </body>
 </html>
