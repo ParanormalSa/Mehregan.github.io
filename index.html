@@ -788,6 +788,74 @@ body {
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .contact-button {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: orange;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact-menu {
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            left: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .contact-menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid #ddd;
+        }
+        .contact-menu a:hover {
+            background-color: #f0f0f0;
+        }
+        .contact-button.active + .contact-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-button" onclick="toggleMenu()">تماس با ما</div>
+
+<div class="contact-menu">
+    <a href="#" onclick="showForm()">درخواست مشاوره رایگان</a>
+    <a href="https://wa.me/989351329909">واتس اپ</a>
+    <a href="https://t.me/mehregangroup32">تلگرام</a>
+</div>
+
+<script>
+    function toggleMenu() {
+        document.querySelector('.contact-button').classList.toggle('active');
+    }
+
+    function showForm() {
+        alert('فرم مشاوره رایگان در اینجا نمایش داده می‌شود.');
+        // اینجا می‌توانید فرم مربوطه را به صورت جاوااسکریپت یا HTML نمایش دهید.
+    }
+</script>
+
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
