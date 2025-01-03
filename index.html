@@ -630,6 +630,9 @@ body {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ثبت درخواست مشاوره</title>
     <style>
+        <section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px; margin-top: 3cm;">
+    <!-- باقی کد فرم -->
+
         /* بارگذاری فونت B Mehr */
         @import url('https://fonts.googleapis.com/css2?family=B+Mehr&display=swap');
 
@@ -755,28 +758,38 @@ body {
     </style>
 </head>
 <body>
-
     <div class="service-title">
         <h2>ثبت درخواست مشاوره</h2>
         <p>برای دریافت مشاوره رایگان، لطفاً درخواست خود را از طریق قسمت زیر ثبت نمایید. پژوهشگران ما در اولین فرصت با شما تماس خواهند گرفت.</p>
     </div>
-
-    <section id="consultation-request">
-        <div class="form-container">
-            <h2>ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
-            <p>در صورت نیاز به مشاوره پایان‌نامه و پذیرش مقاله ISI، فرم زیر را تکمیل کنید تا مشاوران ما با شما تماس بگیرند.</p>
-            <form action="https://formspree.io/f/mzzzaqdr" method="POST">
-                <input type="text" name="name" placeholder="نام و نام خانوادگی" required style="width: 48%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                <input type="text" name="phone" placeholder="شماره تماس" required style="width: 48%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                <input type="text" name="field" placeholder="رشته و گرایش" required style="width: 48%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" required></textarea>
-                <button type="submit">ارسال</button>
+    <section id="consultation-request" style="display: flex; align-items: center; justify-content: center; padding: 20px;">
+        <div style="flex: 1; max-width: 600px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'B Mehr', sans-serif;">
+            <h2 style="text-align: center;">ثبت درخواست مشاوره پایان‌نامه و مقاله</h2>
+            <p style="text-align: center;">در صورت نیاز به مشاوره پایان‌نامه و پذیرش مقاله ISI، فرم زیر را تکمیل کنید تا مشاوران ما با شما تماس بگیرند.</p>
+            <form action="https://formspree.io/f/mzzzaqdr" method="POST" style="display: grid; gap: 10px;">
+                <input type="text" name="name" placeholder="نام و نام خانوادگی" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <input type="text" name="phone" placeholder="شماره تماس" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <input type="text" name="field" placeholder="رشته و گرایش" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                
+                <!-- فیلد کشویی -->
+                <select name="type" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <option value="">انتخاب نوع</option>
+                    <option value="پروپوزال">پروپوزال</option>
+                    <option value="پایان نامه">پایان نامه</option>
+                    <option value="سمینار">سمینار</option>
+                    <option value="مقاله">مقاله</option>
+                    <option value="کار کلاسی">کار کلاسی</option>
+                </select>
+                
+                <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required></textarea>
+                <button type="submit" style="padding: 10px; background-color: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer;">ارسال</button>
             </form>
         </div>
-        <div class="form-image">
-            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/book.jpg" alt="مشاوره پایان‌نامه">
+        <div style="flex: 1; max-width: 600px; text-align: center; padding: 20px;">
+            <img src="https://raw.githubusercontent.com/ParanormalSa/Mehregan.github.io/main/book.jpg" alt="مشاوره پایان‌نامه" style="max-width: 100%; border-radius: 8px;">
         </div>
     </section>
+</body>
 
     <script>
         // اضافه کردن اسکریپت بسته شدن منو تماس با کلیک خارج از فرم
