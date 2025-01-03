@@ -269,23 +269,29 @@
         }
 
 .service-box {
-    display: flex;
-    justify-content: center; /* تصویر را به مرکز افقی قرار می‌دهد */
-    align-items: center; /* تصویر را به مرکز عمودی قرار می‌دهد */
+    display: flex; /* استفاده از flexbox برای کنار هم قرار دادن تصویر و متن */
+    align-items: center; /* هم‌تراز کردن محتوا در محور عمودی */
+    justify-content: space-between; /* فضای متناسب بین تصویر و متن */
+    gap: 20px; /* فاصله بین متن و تصویر */
+    flex-wrap: wrap; /* برای حالت ریسپانسیو */
+}
+
+.text-content {
+    flex: 1; /* متن فضای بیشتری بگیرد */
+    text-align: right; /* متن به راست چین شود */
 }
 
 .service-box img {
-    max-width: 100%;
+    max-width: 40%; /* تصویر حداکثر ۴۰٪ از عرض را بگیرد */
     height: auto;
-    border-radius: 10px; /* گوشه‌های گرد */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* سایه برای عمق‌دهی */
-    margin-top: 15px; /* فاصله از متن بالا */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* افکت هنگام هاور */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-box img:hover {
-    transform: scale(1.05); /* بزرگ‌نمایی هنگام هاور */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* سایه بیشتر هنگام هاور */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
         .service-box h3 {
