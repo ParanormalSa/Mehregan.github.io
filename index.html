@@ -913,6 +913,8 @@ body {
 
 </body>
 </html>
+
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>
@@ -953,9 +955,6 @@ body {
         .contact-menu a:hover {
             background-color: #f0f0f0;
         }
-        .contact-button.active + .contact-menu {
-            display: block;
-        }
         .consultation-form {
             display: none;
             position: fixed;
@@ -994,9 +993,9 @@ body {
 </head>
 <body>
 
-<div class="contact-button" onclick="toggleMenu()">تماس با ما</div>
-<div class="contact-menu" onclick="closeMenu()">
-    <a href="#" onclick="toggleForm()">درخواست مشاوره رایگان</a>
+<div class="contact-button" onclick="toggleMenu(event)">تماس با ما</div>
+<div class="contact-menu" id="contactMenu">
+    <a href="#" onclick="toggleForm(event)">درخواست مشاوره رایگان</a>
     <a href="https://wa.me/+989351329909" target="_blank">واتس اپ</a>
     <a href="https://t.me/mehregangroup32" target="_blank">تلگرام</a>
 </div>
@@ -1015,27 +1014,22 @@ body {
 <div class="overlay" onclick="closeAll()"></div>
 
 <script>
-    function toggleMenu() {
-        document.querySelector('.contact-button').classList.toggle('active');
+    function toggleMenu(event) {
+        event.stopPropagation();  // جلوگیری از بستن منو هنگام کلیک روی دکمه
+        const menu = document.getElementById('contactMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     }
 
-    function closeMenu() {
-        document.querySelector('.contact-button').classList.remove('active');
-    }
-
-    function toggleForm() {
+    function toggleForm(event) {
+        event.stopPropagation();  // جلوگیری از بستن منو هنگام کلیک روی فرم مشاوره
         document.getElementById('consultationForm').style.display = 'block';
         document.querySelector('.overlay').style.display = 'block';
     }
 
-    function closeForm() {
+    function closeAll() {
         document.getElementById('consultationForm').style.display = 'none';
         document.querySelector('.overlay').style.display = 'none';
-    }
-
-    function closeAll() {
-        closeMenu();
-        closeForm();
+        document.getElementById('contactMenu').style.display = 'none';
     }
 </script>
 
