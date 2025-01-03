@@ -258,15 +258,18 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
-          .service-box img {
-            max-width: 300px; /* حداکثر عرض عکس 200px */
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 15px auto; /* مرکز کردن عکس */
-            border-radius: 10px;
-        }
+ .service-box img {
+    max-width: 80%; /* تصویر حداکثر ۴۰٪ از عرض را بگیرد */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.service-box img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
      .service-box h3 {
             font-family: 'B Titr', sans-serif; /* استفاده از فونت B Titr برای تیترها */
             font-size: 1.6rem;
