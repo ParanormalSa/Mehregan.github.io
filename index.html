@@ -788,125 +788,6 @@ body {
     </script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تماس با ما</title>
-    <style>
-        body { font-family: 'B Mehr', sans-serif; }
-        .contact-button {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background-color: orange;
-            color: white;
-            padding: 15px;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .contact-menu {
-            display: none;
-            position: fixed;
-            bottom: 70px;
-            right: 10px;
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            border-radius: 10px;
-            padding: 10px;
-        }
-        .contact-menu a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: black;
-            border-bottom: 1px solid #ddd;
-        }
-        .contact-menu a:hover {
-            background-color: #f0f0f0;
-        }
-        .contact-button.active + .contact-menu {
-            display: block;
-        }
-        .consultation-form {
-            display: none;
-            position: fixed;
-            bottom: 70px;
-            right: 280px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            z-index: 10;
-        }
-        .consultation-form input, .consultation-form textarea, .consultation-form button {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 100%;
-            font-family: 'B Mehr', sans-serif;
-        }
-        .consultation-form button {
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-        }
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 9;
-        }
-    </style>
-</head>
-<body>
-
-<div class="contact-button" onclick="toggleMenu()">تماس با ما</div>
-<div class="contact-menu">
-    <a href="#" onclick="toggleForm()">درخواست مشاوره رایگان</a>
-    <a href="https://wa.me/+989351329909" target="_blank">واتس اپ</a>
-    <a href="https://t.me/mehregangroup32" target="_blank">تلگرام</a>
-</div>
-
-<div id="consultationForm" class="consultation-form">
-    <h3>درخواست مشاوره رایگان</h3>
-    <form action="https://formspree.io/f/mzzzaqdr" method="POST">
-        <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
-        <input type="text" name="phone" placeholder="شماره تماس" required>
-        <input type="text" name="field" placeholder="رشته و گرایش" required>
-        <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" required></textarea>
-        <button type="submit">ارسال</button>
-    </form>
-</div>
-
-<div class="overlay" onclick="closeForm()"></div>
-
-<script>
-    function toggleMenu() {
-        document.querySelector('.contact-button').classList.toggle('active');
-    }
-
-    function toggleForm() {
-        document.getElementById('consultationForm').style.display = 'block';
-        document.querySelector('.overlay').style.display = 'block';
-    }
-
-    function closeForm() {
-        document.getElementById('consultationForm').style.display = 'none';
-        document.querySelector('.overlay').style.display = 'none';
-    }
-</script>
-
-</body>
-</html>
 
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -1032,3 +913,133 @@ body {
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما</title>
+    <style>
+        body { font-family: 'B Mehr', sans-serif; }
+        .contact-button {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: orange;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact-menu {
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            right: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .contact-menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid #ddd;
+        }
+        .contact-menu a:hover {
+            background-color: #f0f0f0;
+        }
+        .contact-button.active + .contact-menu {
+            display: block;
+        }
+        .consultation-form {
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            right: 280px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 220px;
+            z-index: 10;
+        }
+        .consultation-form input, .consultation-form textarea, .consultation-form button {
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            font-family: 'B Mehr', sans-serif;
+        }
+        .consultation-form button {
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-button" onclick="toggleMenu()">تماس با ما</div>
+<div class="contact-menu" onclick="closeMenu()">
+    <a href="#" onclick="toggleForm()">درخواست مشاوره رایگان</a>
+    <a href="https://wa.me/+989351329909" target="_blank">واتس اپ</a>
+    <a href="https://t.me/mehregangroup32" target="_blank">تلگرام</a>
+</div>
+
+<div id="consultationForm" class="consultation-form">
+    <h3>درخواست مشاوره رایگان</h3>
+    <form action="https://formspree.io/f/mzzzaqdr" method="POST">
+        <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
+        <input type="text" name="phone" placeholder="شماره تماس" required>
+        <input type="text" name="field" placeholder="رشته و گرایش" required>
+        <textarea name="message" placeholder="توضیحات یا درخواست" rows="4" required></textarea>
+        <button type="submit">ارسال</button>
+    </form>
+</div>
+
+<div class="overlay" onclick="closeAll()"></div>
+
+<script>
+    function toggleMenu() {
+        document.querySelector('.contact-button').classList.toggle('active');
+    }
+
+    function closeMenu() {
+        document.querySelector('.contact-button').classList.remove('active');
+    }
+
+    function toggleForm() {
+        document.getElementById('consultationForm').style.display = 'block';
+        document.querySelector('.overlay').style.display = 'block';
+    }
+
+    function closeForm() {
+        document.getElementById('consultationForm').style.display = 'none';
+        document.querySelector('.overlay').style.display = 'none';
+    }
+
+    function closeAll() {
+        closeMenu();
+        closeForm();
+    }
+</script>
+
+</body>
+</html>
+
+
