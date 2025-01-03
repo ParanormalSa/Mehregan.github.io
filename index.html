@@ -995,7 +995,7 @@ body {
 
 <div class="contact-button" onclick="toggleMenu(event)">تماس با ما</div>
 <div class="contact-menu" id="contactMenu">
-    <a href="#" onclick="toggleForm(event)">درخواست مشاوره رایگان</a>
+    <a href=onclick="toggleForm(event)">درخواست مشاوره رایگان</a>
     <a href="https://wa.me/+989351329909" target="_blank">واتس اپ</a>
     <a href="https://t.me/mehregangroup32" target="_blank">تلگرام</a>
 </div>
@@ -1014,6 +1014,21 @@ body {
 <div class="overlay" onclick="closeAll()"></div>
 
 <script>
+    function toggleMenu(event) {
+    event.stopPropagation();  // جلوگیری از بسته شدن هنگام کلیک روی منو
+    const menu = document.getElementById('contactMenu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+}
+
+function closeAll() {
+    document.getElementById('consultationForm').style.display = 'none';
+    document.querySelector('.overlay').style.display = 'none';
+    document.getElementById('contactMenu').style.display = 'none';
+}
+
+// کلیک روی فضای اطراف
+document.querySelector('.overlay').addEventListener('click', closeAll);
+
     function toggleMenu(event) {
         event.stopPropagation();  // جلوگیری از بستن منو هنگام کلیک روی دکمه
         const menu = document.getElementById('contactMenu');
