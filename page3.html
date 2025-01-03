@@ -268,21 +268,25 @@
             text-align: justify; /* متن به صورت justify */
         }
 
+.service-box {
+    display: flex;
+    justify-content: center; /* تصویر را به مرکز افقی قرار می‌دهد */
+    align-items: center; /* تصویر را به مرکز عمودی قرار می‌دهد */
+}
+
 .service-box img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px; /* گوشه‌های گرد */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* سایه برای عمق‌دهی */
     margin-top: 15px; /* فاصله از متن بالا */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* افکت هنگام هاور */
-    margin-center: auto; /* مرکز‌سازی تصویر */
 }
 
 .service-box img:hover {
     transform: scale(1.05); /* بزرگ‌نمایی هنگام هاور */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* سایه بیشتر هنگام هاور */
 }
-
 
         .service-box h3 {
             font-size: 1.4rem;
