@@ -493,79 +493,82 @@ body {
 </body>
 </html>
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اسلایدر سایت مهرگان</title>
-    <!-- لینک به فایل‌های CSS -->
-    <link rel="stylesheet" href="owl.carousel.min.css">
-    <link rel="stylesheet" href="owl.theme.default.min.css">
-    <style>
-        body {
-            font-family: 'B Mehr', Arial, sans-serif;
-            direction: rtl;
-        }
-
-        .slider-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .owl-carousel img {
-            width: 100%;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اسلایدر سفارشی</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000; /* برای پس‌زمینه مشابه */
+    }
+    .owl-carousel .item {
+      position: relative;
+      text-align: center;
+      background: #111; /* رنگ پس‌زمینه هر اسلاید */
+      border-radius: 10px;
+    }
+    .owl-carousel .item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .text-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+    .button {
+      background-color: #00ff00;
+      padding: 10px 20px;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <div class="slider-container">
-        <div class="owl-carousel owl-theme">
-            <div>
-                <a href="https://example.com/1">
-                    <img src="https://www.cdkeyshare.ir/wp-content/uploads/2024/07/banner-share30.jpg" alt="بنر ۱">
-                </a>
-            </div>
-            <div>
-                <a href="https://example.com/2">
-                    <img src="https://www.cdkeyshare.ir/wp-content/uploads/2023/10/banner-xbox-new.jpg" alt="بنر ۲">
-                </a>
-            </div>
-            <div>
-                <a href="https://example.com/3">
-                    <img src="https://www.cdkeyshare.ir/wp-content/uploads/2022/06/banner-plus-002.jpg" alt="بنر ۳">
-                </a>
-            </div>
-            <div>
-                <a href="https://example.com/4">
-                    <img src="https://www.cdkeyshare.ir/wp-content/uploads/2023/10/banner-ps5-new.jpg" alt="بنر ۴">
-                </a>
-            </div>
-        </div>
-    </div>
 
-    <!-- لینک به فایل‌های جاوااسکریپت -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".owl-carousel").owlCarousel({
-                rtl: true,
-                loop: true,
-                margin: 10,
-                nav: true,
-                responsive: {
-                    0: { items: 1 },
-                    600: { items: 2 },
-                    1000: { items: 3 }
-                }
-            });
-        });
-    </script>
+<div class="owl-carousel owl-theme">
+  <div class="item">
+    <img src="https://via.placeholder.com/800x400" alt="اسلاید 1">
+    <div class="text-overlay">خرید بازی FC25</div>
+  </div>
+  <div class="item">
+    <img src="https://via.placeholder.com/800x400" alt="اسلاید 2">
+    <div class="text-overlay">بهترین تجربه بازی</div>
+  </div>
+  <div class="item">
+    <img src="https://via.placeholder.com/800x400" alt="اسلاید 3">
+    <div class="text-overlay">همین حالا خرید کنید</div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      items: 1,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true
+    });
+  });
+</script>
+
 </body>
 </html>
-
 
 <section class="services-section">
     <section id="why-mehregan">
